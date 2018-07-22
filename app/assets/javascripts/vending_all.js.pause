@@ -1,0 +1,123 @@
+
+// <div id="myval"></div>
+  $( document ).ready(function() {
+    let Web3 = require('web3');
+    let web3 = new Web3(new Web3.providers.HttpProvider('https://api.myetherapi.com/eth'));
+    let vendingJson = '[{"constant":true,"inputs":[],"name":"available","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"amountRaised","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"CloseVending","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"price","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"claimFunding","outputs":[],"payable":false,"type":"function"},{"inputs":[{"name":"holdingAddress","type":"address"},{"name":"token","type":"address"},{"name":"budget","type":"uint256"},{"name":"rate","type":"uint256"}],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"}]';
+    let contractABI = JSON.parse(vendingJson);
+    console.log(contractABI);
+
+    let MyContract = web3.eth.contract(contractABI);
+
+    // input values here
+    let card10addr   = "0x72b34d637C0d14acE58359Ef1bF472E4b4c57125";
+    let card10vend1addr = "0x46C4723111e2bAFeF7d5d0664B3F7BC68D875DeA";
+    let card11addr   = "0xb36c87F1f1539c5FC6f6e7b1C632e1840C9B66b4";
+    let card11vend1addr = "0xb45e6719FDAa8f25D883bf042c4fE07b14aC8146";
+    let card12addr   = "0xD15af10A258432e7227367499E785C3532b50271";
+    let card12vend1addr = "0x105485CFBcB8acDEC209bbe1896390Be4F7c6603";
+    let card13addr   = "0x2d922712f5e99428c65b44f09Ea389373d185bB3";
+    let card13vend1addr = "0x3cF5c70AAA219031AE21dCF8618588a1BBCB058a";
+    let card14addr   = "0x0565ac44e5119a3224b897De761a46A92aA28ae8";
+    let card14vend1addr = "0xa27c29ce0c7096cc27f1f165dc265daf152b0f45";
+    let card15addr   = "0xdb7F262237Ad8acca8922aA2c693a34D0d13e8fe";
+    let card15vend1addr = "0xc2b2cd010812df044363687a0287efe84cfee1f1";
+    let card16addr   = "0x1b63532CcB1FeE0595c7fe2Cb35cFD70ddF862Cd";
+    let card16vend1addr = "0x558cefca4779f3c3d9203b3fb0f3b5bc54e681e9";
+    let card17addr   = "0xF59536290906F204C3c7918D40C1Cc5f99643d0B";
+    let card17vend1addr = "0xFc370fDD6a5441A7B367099645E4393c904F7c94";
+    let card18addr   = "0xA507D9d28bbca54cBCfFad4BB770C2EA0519F4F0";
+    let card18vend1addr = "0x52D38D9D852db7D072b4F32768037771B97EC367";
+    let card19addr   = "0xf26BC97Aa8AFE176e275Cf3b08c363f09De371fA";
+    let card19vend1addr = "0x0E7C091138A9abF27927326bE457B3F57Db5184D";
+    let card20addr   = "0xD0ec99E99cE22f2487283A087614AEe37F6B1283";
+    let card20vend1addr = "0x6E561B66f393166d611f40A1e82E373f00270393";
+    let card21addr   = "0xB7A5a84Ff90e8Ef91250fB56c50a7bB92a6306EE";
+    let card21vend1addr = "0xf3Dfa32B947Bc250FB8cD946e1d6ACA8a3921237";
+    let card22addr   = "0x148fF761D16632da89F3D30eF3dFE34bc50CA765";
+    let card22vend1addr = "0x103865d9E8532bC26F9E6E881a586BAcfBaeE36D";
+    let card23addr   = "0xCDE7185B5C3Ed9eA68605a960F6653AA1a5b5C6C";
+    let card23vend1addr = "0x18407adFf40bEb8D8609E1ec7dF9D07bE5e1c446";
+    let card24addr   = "0xE67dad99c44547B54367E3e60fc251fC45a145C6";
+    let card24vend1addr = "0xa58ae2DF9c899156B29dBDf8aAE640C0Aef1e999";
+    let card25addr   = "0xC7f60C2b1DBDfd511685501EDEb05C4194D67018";
+    let card25vend1addr = "0x90AFF3cBF501DDC53DD3aE68c810E88923bA5aE5";
+    let card26addr   = "0x1cB5BF4Be53eb141B56f7E4Bb36345a353B5488c";
+    let card26vend1addr = "0x927DcF52A932d6640bA09a8B5e32C204225024E8";
+    let card27addr   = "0xfb9f3fa2502d01d43167a0a6e80be03171df407e";
+    let card27vend1addr = "0x87767E3aa2479b3faF5FbbB7C7C6874E9e3aB14e";
+    let card28addr   = "0x59D190e8A2583C67E62eEc8dA5EA7f050d8BF27e";
+    let card28vend1addr = "0x3273eF350E9ffC8f33eA80971650c7c627B43120";
+    let card29addr   = "0xD3540bCD9c2819771F9D765Edc189cBD915FEAbd";
+    let card29vend1addr = "0x39B058eC8B2fa19Cec655A87EaC127Ba434111b1";
+    let card30addr   = "0x7f5b230dc580d1e67df6ed30dee82684dd113d1f";
+    let card30vend1addr = "0x338C6fbcEff5433412382590a7de6da03Bb57389";
+
+    //outputs
+    //vending machine quantity values output
+    $('#output10vend1supply').html(MyContract.at(card10vend1addr).available().toString());
+    $('#output11vend1supply').html(MyContract.at(card11vend1addr).available().toString());
+    $('#output12vend1supply').html(MyContract.at(card12vend1addr).available().toString());
+    $('#output13vend1supply').html(MyContract.at(card13vend1addr).available().toString());
+    $('#output14vend1supply').html(MyContract.at(card14vend1addr).available().toString());
+    $('#output15vend1supply').html(MyContract.at(card15vend1addr).available().toString());
+    $('#output16vend1supply').html(MyContract.at(card16vend1addr).available().toString());
+    $('#output17vend1supply').html(MyContract.at(card17vend1addr).available().toString());
+    $('#output18vend1supply').html(MyContract.at(card18vend1addr).available().toString());
+    $('#output19vend1supply').html(MyContract.at(card19vend1addr).available().toString());
+    $('#output20vend1supply').html(MyContract.at(card20vend1addr).available().toString());
+    $('#output21vend1supply').html(MyContract.at(card21vend1addr).available().toString());
+    $('#output22vend1supply').html(MyContract.at(card22vend1addr).available().toString());
+    $('#output23vend1supply').html(MyContract.at(card23vend1addr).available().toString());
+    $('#output24vend1supply').html(MyContract.at(card24vend1addr).available().toString());
+    $('#output25vend1supply').html(MyContract.at(card25vend1addr).available().toString());
+    $('#output26vend1supply').html(MyContract.at(card26vend1addr).available().toString());
+    $('#output27vend1supply').html(MyContract.at(card27vend1addr).available().toString());
+    $('#output28vend1supply').html(MyContract.at(card28vend1addr).available().toString());
+    $('#output29vend1supply').html(MyContract.at(card29vend1addr).available().toString());
+    $('#output30vend1supply').html(MyContract.at(card30vend1addr).available().toString());
+
+    //card address output for site
+    $('#outputcard10addr').html(card10addr);
+    $('#outputcard10vend1addr').html(card10vend1addr);
+    $('#outputcard11addr').html(card11addr);
+    $('#outputcard11vend1addr').html(card11vend1addr);
+    $('#outputcard12addr').html(card12addr);
+    $('#outputcard12vend1addr').html(card12vend1addr);
+    $('#outputcard13addr').html(card13addr);
+    $('#outputcard13vend1addr').html(card13vend1addr);
+    $('#outputcard14addr').html(card14addr);
+    $('#outputcard14vend1addr').html(card14vend1addr);
+    $('#outputcard15addr').html(card15addr);
+    $('#outputcard15vend1addr').html(card15vend1addr);
+    $('#outputcard16addr').html(card16addr);
+    $('#outputcard16vend1addr').html(card16vend1addr);
+    $('#outputcard17addr').html(card17addr);
+    $('#outputcard17vend1addr').html(card17vend1addr);
+    $('#outputcard18addr').html(card18addr);
+    $('#outputcard18vend1addr').html(card18vend1addr);
+    $('#outputcard19addr').html(card19addr);
+    $('#outputcard19vend1addr').html(card19vend1addr);
+    $('#outputcard20addr').html(card20addr);
+    $('#outputcard20vend1addr').html(card20vend1addr);
+    $('#outputcard21addr').html(card21addr);
+    $('#outputcard21vend1addr').html(card21vend1addr);
+    $('#outputcard22addr').html(card22addr);
+    $('#outputcard22vend1addr').html(card22vend1addr);
+    $('#outputcard23addr').html(card23addr);
+    $('#outputcard23vend1addr').html(card23vend1addr);
+    $('#outputcard24addr').html(card24addr);
+    $('#outputcard24vend1addr').html(card24vend1addr);
+    $('#outputcard25addr').html(card25addr);
+    $('#outputcard25vend1addr').html(card25vend1addr);
+    $('#outputcard26addr').html(card26addr);
+    $('#outputcard26vend1addr').html(card26vend1addr);
+    $('#outputcard27addr').html(card27addr);
+    $('#outputcard27vend1addr').html(card27vend1addr);
+    $('#outputcard28addr').html(card28addr);
+    $('#outputcard28vend1addr').html(card28vend1addr);
+    $('#outputcard29addr').html(card29addr);
+    $('#outputcard29vend1addr').html(card29vend1addr);
+    $('#outputcard30addr').html(card30addr);
+    $('#outputcard30vend1addr').html(card30vend1addr);
+  });

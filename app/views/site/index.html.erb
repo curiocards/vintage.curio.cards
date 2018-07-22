@@ -1,0 +1,422 @@
+  <nav id="navbar" class="page-navbar navbar navbar-inverse navbar-toggleable-md fixed-top px-sm-3">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+      <%#= image_tag("/img/#{@card.file_name.to_s}", width: '300', height: '400') %>
+      <%= image_tag("/img/logo-top.svg", class: "logo-top", alt: "logo") %>
+      <!--img class="logo-top" src="img/logo-top.svg" alt="logo"-->
+    </a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" href="https://vote.curio.cards" target="_blank"><b>Vote</b></a>
+        </li>
+        <li class="nav-item bordered-item">
+          <!--a class="nav-link text-uppercase" href="https://community.curio.cards" target="_blank">Community Site</a-->
+          <a class="nav-link text-uppercase" href="https://discord.gg/uA6vnD3" target="_blank">Community Chat</a>
+        </li>
+        <li class="nav-item">
+          <!--a class="nav-link text-uppercase" href="https://calendar.curio.cards" target="_blank">Calendar</a-->
+          <a class="nav-link text-uppercase" href="https://www.meetup.com/San-Francisco-Crypto-Art-Meetup/" target="_blank">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" href="#main-section">Cards</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" href="#about-the-artist">Artists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" href="#how-to-buy">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-uppercase" href="trade.html">Trade</a>
+        </li>
+        <li class="nav-item bordered-item">
+          <a class="nav-link text-uppercase" href="https://mycuriowallet.com" target="_blank">My Curio Wallet</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="main-section" class="main-section">
+    <!--<div class="countdown mx-auto" id="countdown"></div> -->
+
+    <div class="text-center time-left-info">
+    <div class="down-section-info text-center">
+      <!-- <h3 class="text-uppercase">View current cards</h3>
+      <div class="down-arrow-circle arrow-white text-center">
+        <! click this link will scroll to div#cards-available >
+        <a href="#cards-available">
+          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="cards-available" class="current-cards-available px-2 px-sm-5">
+    <div class="heading">
+      <div class="current-cards-available-left-line">
+        <div class="current-cards-available-horizontal-line"></div>
+      </div>
+      <div class="current-cards-available-right-line">
+        <div class="current-cards-available-horizontal-line"></div>
+      </div>
+      <h2 class="current-cards-available-title text-uppercase text-center">New Card Voting</h2>
+    </div>
+
+    <div class="text-center body-content">
+      <h3>
+        <b>New Cards being voted on Now</b><br>
+        Throw your support behind the card and artist you want to see next<br>
+      </h3>
+
+      <section class="about-the-artist">
+        <div class="heading text-center">
+          <br>
+          <a href="https://vote.curio.cards" target="_blank"><span class="text-uppercase">Vote Now</span></a>
+        </div>
+      </section>
+    </div>
+
+  </section>
+
+  <section id="cards-available" class="current-cards-available px-2 px-sm-5">
+    <div class="heading">
+      <div class="current-cards-available-left-line">
+        <div class="current-cards-available-horizontal-line"></div>
+      </div>
+      <div class="current-cards-available-right-line">
+        <div class="current-cards-available-horizontal-line"></div>
+      </div>
+      <h2 class="current-cards-available-title text-uppercase text-center">Featured cards Available</h2>
+    </div>
+
+    <div class="cards-wrapper">
+      <div class="row cards-container">
+        <div class="col-12 col-lg-6 card-item mx-auto">
+          <div class="card-image-holder">
+            <a href="#">
+              <img class="card-image" src="img/cards/28.jpg" alt="Curio Card 28">
+            </a>
+          </div>
+          <div class="text-center down-arrow-grey">
+            <!-- click this link will scrool to div#card-1 -->
+            <a href="#card-1">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div id="card-3" class="card-details">
+            <div class="item-label card-address-item">
+              <img class="bigger-icon" src="img/ethereum-logo.svg" alt="address">
+              <span>Card Address:</span>
+            </div>
+            <!--
+            <div class="card-address clipboard-container">
+              <span class="clipboard-text"></span>
+            </div>
+            -->
+            <div class="card-address">
+              <span id="outputcard28addr">loading...</span>
+            </div>
+            <div class="item-label amount-item mb-3">
+              <img src="img/price-tag.svg" alt="price">
+              <span>Amount Available:</span>
+              <p><em id="output28vend1supply">loading...</em> / 400</p>
+              <p>0.0025 ETH/card</p>
+            </div>
+            <div class="item-label vm-address-item">
+              <img src="img/shopping-cart.svg" alt="shopping-cart">
+              <span>VM Address:</span>
+            </div>
+            <div class="vm-address">
+              <span id="outputcard28vend1addr">loading...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 card-item mx-auto">
+          <div class="card-image-holder">
+            <a href="#">
+              <img class="card-image" src="img/cards/29.jpg" alt="Curio Card 29">
+            </a>
+          </div>
+          <div class="text-center down-arrow-grey">
+            <!-- click this link will scrool to div#card-2 -->
+            <a href="#card-2">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div id="card-1" class="card-details sold-out">
+            <div class="item-label card-address-item">
+              <img class="bigger-icon" src="img/ethereum-logo.svg" alt="address">
+              <span>Card Address:</span>
+            </div>
+            <!--
+            <div class="card-address clipboard-container">
+              <span class="clipboard-text"></span>
+            </div>
+          -->
+            <div class="card-address">
+              <span id="outputcard29addr">loading...</span>
+            </div>
+            <div class="item-label amount-item mb-3">
+              <img src="img/price-tag.svg" alt="price">
+              <span>Amount Available:</span>
+              <p><em id="output29vend1supply">loading...</em> / 200</p>
+            </div>
+            <div class="sold-out-label text-center">
+              <span class="text-uppercase">Sold out</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 card-item mx-auto">
+          <div class="card-image-holder">
+            <a href="#">
+              <img class="card-image" src="img/cards/30.gif" alt="Curio Card 30">
+            </a>
+          </div>
+          <div class="text-center down-arrow-grey">
+            <!-- click this link will scrool to div#card-3 -->
+            <a href="#card-3">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div id="card-3" class="card-details">
+            <div class="item-label card-address-item">
+              <img class="bigger-icon" src="img/ethereum-logo.svg" alt="address">
+              <span>Card Address:</span>
+            </div>
+            <!--
+            <div class="card-address clipboard-container">
+              <span class="clipboard-text"></span>
+            </div>
+            -->
+            <div class="card-address">
+              <span id="outputcard30addr">loading...</span>
+            </div>
+            <div class="item-label amount-item mb-3">
+              <img src="img/price-tag.svg" alt="price">
+              <span>Amount Available:</span>
+              <p><em id="output30vend1supply">loading...</em> / 821</p>
+              <p>0.0025 ETH/card</p>
+            </div>
+            <div class="item-label vm-address-item">
+              <img src="img/shopping-cart.svg" alt="shopping-cart">
+              <span>VM Address:</span>
+            </div>
+            <div class="vm-address">
+              <span id="outputcard30vend1addr">loading...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-the-artist" class="current-cards-available px-2 px-sm-5">
+    <div class="heading">
+      <div class="current-cards-available-left-line">
+        <div class="current-cards-available-horizontal-line"></div>
+      </div>
+      <div class="current-cards-available-right-line">
+        <div class="current-cards-available-horizontal-line"></div>
+      </div>
+      <h2 class="current-cards-available-title text-uppercase text-center">The Artists</h2>
+    </div>
+  </section>
+
+  <div class="text-center body-content">
+    <h3>Check out the artist pages to find more currently available cards</h3>
+  </div>
+  <br>
+
+  <section class="about-the-artist">
+    <div class="heading text-center">
+      <a href="thoros.html"><span class="text-uppercase">Thoros of Myr</span></a>
+    </div>
+    <div class="heading text-center">
+      <a href="marisol.html"><span class="text-uppercase">Marisol Vengas</span></a>
+    </div>
+    <div class="heading text-center">
+      <a href="daniel.html"><span class="text-uppercase">Daniel Friedman</span></a>
+    </div>
+    <div class="heading text-center">
+      <a href="robek.html"><span class="text-uppercase">Robek World</span></a>
+    </div>
+    <div class="heading text-center">
+      <a href="cryptopop.html"><span class="text-uppercase">Cryptopop</span></a>
+    </div>
+    <div class="heading text-center">
+      <a href="cryptograffiti.html"><span class="text-uppercase">Cryptograffiti</span></a>
+    </div>
+    <!--
+    <div class="heading text-center">
+      <a href="phneep.html"><span class="text-uppercase">Phneep</span></a>
+    </div>
+  -->
+
+    <br>
+
+
+    <div class="main-info-section px-2 px-sm-5">
+      <div id="how-to-buy" class="how-to-buy">
+        <div class="inner-heading">
+          <div class="line-left">
+            <div class="heading-horizontal-line"></div>
+          </div>
+          <div class="line-right">
+            <div class="heading-horizontal-line"></div>
+          </div>
+          <h3 class="line-text text-uppercase text-center how-to-buy-title">How to buy</h3>
+        </div>
+
+        <div class="container steps-container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 px-4 px-lg-5 text-center">
+              <div class="img-holder step-3">
+                <img src="img/step3.svg" alt="step 3">
+              </div>
+              <p class="text-center">
+                <b>1.</b>
+                <span>Create and use your <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a> account to manage your cards.</span>
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-4 px-4 px-lg-5 text-center">
+              <div class="img-holder step-1">
+                <img src="img/step1.svg" alt="step 1">
+              </div>
+              <p class="text-center">
+                <b>2.</b>
+                <span>Send ethereum from your <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a> to one of the vending machine addresses.</span>
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-4 px-4 px-lg-5 text-center">
+              <div class="img-holder step-2">
+                <img src="img/step2.svg" alt="step 2">
+              </div>
+              <p class="text-center">
+                <b>3.</b>
+                <span>View your new cards in the <a href="gallery.html" target="_blank">Gallery</a> and your <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a>.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="text-center custom-text">
+          <a href="trade.html">Check out the Curio Marketplace to trade your cards.</a>
+        </h4>
+
+        <!-- Start of FAQ section -->
+        <div class="inner-heading">
+          <h3 class="text-uppercase text-center">Frequently Asked Questions</h3>
+        </div>
+        <center>
+            <div class="container ">
+                <div class="panel-group" id="faqAccordion">
+                  <div class="panel panel-default ">
+                      <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+                           <h4 class="panel-title">
+                              <a href="#" class="ing">Q: What is Curio Cards?</a>
+                        </h4>
+
+                      </div>
+                      <div id="question0" class="panel-collapse collapse" style="height: 0px;">
+                          <div class="panel-body">
+                               <h5><span class="label label-primary">Answer</span></h5>
+                               <p>
+                                 Curio Card's mission is to create a platform for artists and collectors that finally benefits artists.
+                                 Until now it's not been possible to sell digital artwork without massive fees, theft, or restrictive DRM.
+                                 <br>
+                                 <b>Curio is changing that.</b>
+                                 <br><br>
+                                 Now you can own rare and collectible digital artwork, and interact with it in amazing new ways, all built on proven blockchain technology.
+                                 <br><br>
+                                 We encourage you to join our Discord channel to keep up-to-date, share your ideas, and meet the Curio community.
+                                 <br>
+                                 <center>
+                                 <a href="https://discord.gg/uA6vnD3" target="_blank">
+                                   <img src="img/discord.svg" width="100">
+                                   <br>Click Here to Join!
+                                 </a>
+                               </center>
+                               </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="panel panel-default ">
+                      <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question1">
+                           <h4 class="panel-title">
+                              <a href="#" class="ing">Q: I'm an artist, how can I make my own cards?</a>
+                        </h4>
+
+                      </div>
+                      <div id="question1" class="panel-collapse collapse" style="height: 0px;">
+                          <div class="panel-body">
+                               <h5><span class="label label-primary">Answer</span></h5>
+
+                              <p>
+                                Welcome to Curio Cards, we are thrilled you found this project. We are featuring select artists currently,
+                                with plans to massively open up the platform to everyone as we scale up.
+                                <br><br>
+                                Please let us know about your work and your interest by submitting it on the <a href="https://community.curio.cards" target="_blank">
+                                <b>Community Site</b></a>, and joining our <a href="https://discord.gg/uA6vnD3" target="_blank"><b>Discord</b></a> channel to let us know
+                                about yourself.
+                                <br><br>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="panel panel-default ">
+                      <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question2">
+                           <h4 class="panel-title">
+                              <a href="#" class="ing">Q: How can I get sold out cards? What does it mean to own a sold out card?</a>
+                        </h4>
+
+                      </div>
+                      <div id="question2" class="panel-collapse collapse" style="height: 0px;">
+                          <div class="panel-body">
+                               <h5><span class="label label-primary">Answer</span></h5>
+
+                              <p>
+                                For cards that are sold out, the total supply that will ever exist is now in the hands of individual owners.
+                                Those cards are no longer available from the Curio Cards site artists, and the only way to get them is to trade with
+                                people who currently own those cards.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                    <div class="panel panel-default ">
+                        <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question3">
+                             <h4 class="panel-title">
+                                <a href="#" class="ing">Q: What wallets are supported?</a>
+                          </h4>
+
+                        </div>
+                        <div id="question3" class="panel-collapse collapse" style="height: 0px;">
+                            <div class="panel-body">
+                                 <h5><span class="label label-primary">Answer</span></h5>
+                                <p>
+                                  As long as it's a wallet that lets you control the private keys, you will recieve your Curio Cards.<br>
+                                  But you won't be able to see or manage them unless you use <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a>.
+                                  Devices like the Trezor and Ledger S nano are also compatable with <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a>,
+                                  allowing you to easily store your Curio Cards in a secure hardware wallet.
+                                  <br><br>
+                                  <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a> is mobile compatable, and we will be adding native iOS and Android apps.
+                                  <br><br>
+                                  <b>Don't</b> use ethereum wallets from exchanges when buying cards. You will not recieve your cards since you do not control the private keys.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/panel-group-->
+            </div>
+        <!-- End of FAQ section -->
+      </center>
+
+      </div>
+
+    </div>
+  </section>
