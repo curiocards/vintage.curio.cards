@@ -1,0 +1,234 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+    nav.page-navbar .nav-item {
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 419px) {
+    .page-navbar .logo-top {
+      width: 192px;
+    }
+  }
+
+
+.page-navbar .logo-top {
+    width: 236px;
+  }
+  
+  nav.page-navbar a {
+    color: #f0f0f0;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+  
+  nav.page-navbar .nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .page-navbar.navbar {
+    padding-top: 15px;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  
+  .page-navbar.navbar.navbar-darker {
+    background-color: #282828;
+  }
+  
+  .page-navbar.navbar-inverse .navbar-toggler {
+    top: 20px;
+  }
+  
+  .page-navbar.navbar-inverse .navbar-toggler:focus {
+    outline: none;
+  }
+  
+  .page-navbar.navbar-inverse .navbar-nav .nav-link {
+    color: #f0f0f0;
+    opacity: 1;
+    font-size: 14px;
+    height: 38px;
+    display: inline-block;
+  }
+  
+  .page-navbar.navbar-inverse .navbar-nav .nav-link:hover {
+    opacity: .8;
+  }
+  
+  .page-navbar.navbar-inverse .navbar-toggler {
+    border-color: rgba(255,255,255,.4);
+  }
+  
+  @media screen and (max-width: 991px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06356;
+      background: -webkit-linear-gradient(45deg, #f06356 , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06356, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06356, #ebc08d);
+      background: linear-gradient(45deg, #f06356 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 936px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06356;
+      background: -webkit-linear-gradient(45deg, #f06356 , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06356, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06356, #ebc08d);
+      background: linear-gradient(45deg, #f06356 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 896px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06457;
+      background: -webkit-linear-gradient(45deg, #f06457 , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06457, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06457, #ebc08d);
+      background: linear-gradient(45deg, #f06457 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 846px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06658;
+      background: -webkit-linear-gradient(45deg, #f06658 , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06658, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06658, #ebc08d);
+      background: linear-gradient(45deg, #f06658 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 806px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06758;
+      background: -webkit-linear-gradient(45deg, #f06758 , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06758, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06758, #ebc08d);
+      background: linear-gradient(45deg, #f06758 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f0695a;
+      background: -webkit-linear-gradient(45deg, #f0695a , #ebc08d);
+      background: -o-linear-gradient(45deg, #f0695a, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f0695a, #ebc08d);
+      background: linear-gradient(45deg, #f0695a , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 726px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06b5b;
+      background: -webkit-linear-gradient(45deg, #f06b5b , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06b5b, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06b5b, #ebc08d);
+      background: linear-gradient(45deg, #f06b5b , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 696px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06c5b;
+      background: -webkit-linear-gradient(45deg, #f06c5b , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06c5b, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06c5b, #ebc08d);
+      background: linear-gradient(45deg, #f06c5b , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 666px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06d5b;
+      background: -webkit-linear-gradient(45deg, #f06d5b , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06d5b, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06d5b, #ebc08d);
+      background: linear-gradient(45deg, #f06d5b , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 626px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06e5d;
+      background: -webkit-linear-gradient(45deg, #f06e5d , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06e5d, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06e5d, #ebc08d);
+      background: linear-gradient(45deg, #f06e5d , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 596px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06c5b;
+      background: -webkit-linear-gradient(45deg, #f06c5b , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06c5b, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06c5b, #ebc08d);
+      background: linear-gradient(45deg, #f06c5b , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 566px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06f5d;
+      background: -webkit-linear-gradient(45deg, #f06f5d , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06f5d, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06f5d, #ebc08d);
+      background: linear-gradient(45deg, #f06f5d , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 530px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f06e5d;
+      background: -webkit-linear-gradient(45deg, #f06e5d , #ebc08d);
+      background: -o-linear-gradient(45deg, #f06e5d, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f06e5d, #ebc08d);
+      background: linear-gradient(45deg, #f06e5d , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 496px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f0715e;
+      background: -webkit-linear-gradient(45deg, #f0715e , #ebc08d);
+      background: -o-linear-gradient(45deg, #f0715e, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f0715e, #ebc08d);
+      background: linear-gradient(45deg, #f0715e , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 466px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #f0705e;
+      background: -webkit-linear-gradient(45deg, #f0705e , #ebc08d);
+      background: -o-linear-gradient(45deg, #f0705e, #ebc08d);
+      background: -moz-linear-gradient(45deg, #f0705e, #ebc08d);
+      background: linear-gradient(45deg, #f0705e , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 426px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #ef7360;
+      background: -webkit-linear-gradient(45deg, #ef7360 , #ebc08d);
+      background: -o-linear-gradient(45deg, #ef7360, #ebc08d);
+      background: -moz-linear-gradient(45deg, #ef7360, #ebc08d);
+      background: linear-gradient(45deg, #ef7360 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 396px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #ef7862;
+      background: -webkit-linear-gradient(45deg, #ef7862 , #ebc08d);
+      background: -o-linear-gradient(45deg, #ef7862, #ebc08d);
+      background: -moz-linear-gradient(45deg, #ef7862, #ebc08d);
+      background: linear-gradient(45deg, #ef7862 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 366px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #ef7963;
+      background: -webkit-linear-gradient(45deg, #ef7963 , #ebc08d);
+      background: -o-linear-gradient(45deg, #ef7963, #ebc08d);
+      background: -moz-linear-gradient(45deg, #ef7963, #ebc08d);
+      background: linear-gradient(45deg, #ef7963 , #ebc08d);
+    }
+  }
+  @media screen and (max-width: 340px) {
+    .page-navbar.navbar:not(.navbar-darker) {
+      background: #ef7963;
+      background: -webkit-linear-gradient(45deg, #ef7963 , #ebc08d);
+      background: -o-linear-gradient(45deg, #ef7963, #ebc08d);
+      background: -moz-linear-gradient(45deg, #ef7963, #ebc08d);
+      background: linear-gradient(45deg, #ef7963 , #ebc08d);
+    }
+  }

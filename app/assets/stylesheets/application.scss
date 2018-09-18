@@ -13,7 +13,9 @@
  *= require_self
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
-@import "style";
+@import "bootstrap.min4.a6";
+@import "style/*";
+@import "flipclock";
 @import "mailchimp";
 @import "tether";
+//@import "bootstrap";

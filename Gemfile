@@ -12,6 +12,8 @@ gem 'jquery-rails'
 gem 'tether-rails'
 gem 'bootstrap', '~> 4.0.0' #bootstrap
 gem 'popper_js', '~> 1.12.9' # https://popper.js.org/
+gem 'flipclockjs-rails', '~> 0.7.7'
+gem 'pry-byebug'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'

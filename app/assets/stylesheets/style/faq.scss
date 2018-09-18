@@ -1,0 +1,47 @@
+/* FAQs */
+
+.faq-section {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-section .title {
+    color: #f24645;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.faq-section .panel .panel-title {
+    color: #f24645;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px dashed #f24645;
+    border-width: 3px;
+}
+
+.faq-section .panel-title h4 {
+    margin: 1px;
+}
+
+.faq-section .panel-title:hover {
+    opacity: .4;
+}
+
+.faq-section .panel-body {
+    color: #f24645;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.faq-section .panel-body p {
+    line-height: 1.4em;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: .9px;
+    padding-bottom: 12px;
+}

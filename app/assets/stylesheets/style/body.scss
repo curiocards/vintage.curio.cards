@@ -1,0 +1,168 @@
+body {
+  background: #f0f0f0;
+  font-family: 'Rubik', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+/* Body button */
+.body-button {
+    position: relative;
+    top: 20px;
+    margin-bottom: 35px;
+  }
+  
+  .body-button span {
+    color: #f24645;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    border: 3px solid #f24645;
+    border-radius: 30px;
+    padding: 10px 32px 8px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    -webkit-transition: .4s ease-in;
+    -o-transition: .4s ease-in;
+    transition: .4s ease-in;
+  }
+  
+  .body-button span:hover {
+    background-color: #f24645;
+    color: #f0f0f0;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .body-button span {
+      font-size: 20px;
+      padding: 8px 28px;
+    }
+  }
+
+
+/* Body formating - used in How to buy? */
+
+.body-format {
+  color: #f0f0f0;
+  background: #f24645; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#f24645 , #ebc08d, #f24645); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#f24645 , #ebc08d, #f24645); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#f24645 , #ebc08d, #f24645); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#f24645 , #ebc08d, #f24645); /* Standard syntax */
+  padding-top: 42px;
+  padding-bottom: 54px;
+}
+
+.body-format .inner-heading {
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+
+.body-format .inner-heading p {
+  background-color: transparent;
+  padding: 0 15px;
+  font-weight: 700;
+  color: #f0f0f0;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.body-format .inner-heading p span {
+  display: inline-block;
+  position: relative;
+}
+
+.body-format .inner-heading p span:before,
+.body-format .inner-heading p span:after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #f0f0f0;
+  top: 15px;
+  width: 100%;
+}
+
+.body-format .inner-heading p span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.body-format .inner-heading p span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.body-format .how-to-buy .custom-text {
+  letter-spacing: 1.3px;
+  padding-top: 0px;
+  font-size: 16px;
+  margin-bottom: 42px;
+  line-height: 2em;
+}
+
+.body-format .how-to-buy .custom-text a {
+  padding-bottom: 5px;
+  line-height: 1.5em;
+}
+
+.body-format .how-to-buy .custom-text a:hover {
+  opacity: .8;
+}
+
+
+.body-format .img-holder.step-1 img {
+    width: 80%;
+  }
+  
+  .body-format .img-holder.step-2 img,
+  .body-format .img-holder.step-3 img {
+    width: 46%;
+  }
+  
+  @media (max-width: 768px) {
+    .body-format .img-holder.step-1 img {
+      width: 50%;
+    }
+    .body-format .img-holder.step-2 img,
+    .body-format .img-holder.step-3 img {
+      width: 25%;
+    }
+    .steps-container [class*="col-"]:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+  }
+  
+  .body-format .how-to-buy a {
+    color: #f0f0f0;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px dashed #f0f0f0;
+  }
+  
+  .body-format .how-to-buy a:hover {
+    opacity: .8;
+  }
+  
+  .body-format .how-to-buy .steps-container {
+    margin-bottom: 30px;
+  }
+  
+  .body-format .how-to-buy .steps-container p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.3em;
+    margin-top: 24px;
+  }
+  
+  .body-format .how-to-buy h4 a {
+    border-width: 3px;
+  }
+  
+  .body-format .how-to-buy h4 a.text-link {
+    border: none;
+  }
+
+

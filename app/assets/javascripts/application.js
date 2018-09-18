@@ -11,8 +11,13 @@
 // about supported directives.
 //
 //= require jquery3
+//= require flipclock.min
 //= require tether
 //= require popper
 //= require bootstrap-sprockets
 //= require rails-ujs
-//= require_directory .
+//= require main
+//= require web3.min
+//= require google-analytics
+// require vending/vending
+// require_directory .

@@ -1,0 +1,12 @@
+<div class="panel">
+    <button class="btn-link collapsed panel-title" data-toggle="collapse" data-target="#toggle<%=q_id.to_s%>" aria-expanded="false" aria-controls="toggle<%=q_id.to_s%>">
+        <h4><%= q_title.to_s %></h4>
+    </button>
+    <div id="toggle<%=q_id.to_s%>" class="collapse" data-parent="#accordion">
+        <div class="panel-body">
+            <p>
+                <%= yield %>
+            </p>
+        </div>
+    </div>
+</div>

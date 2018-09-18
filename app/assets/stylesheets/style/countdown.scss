@@ -1,0 +1,89 @@
+
+.countdown {
+    width: 460px;
+  }
+  
+  @media (max-width: 320px) {
+    .countdown {
+      zoom: 0.5 !important;
+      -moz-transform: scale(0.5) !important;
+      transform: scale(0.5) !important;
+      margin-top: 30px !important;
+    }
+    /*.main-section .time-left-info {
+        padding-top: 175px !important;
+    } */
+    .down-section-info {
+      margin-top: 40px !important;
+    }
+  }
+  @media (min-width: 321px) and (max-width: 479px) {
+    .countdown {
+      zoom: 0.6 !important;
+      -moz-transform: scale(0.6) !important;
+      transform: scale(0.6) !important;
+    }
+    /*.main-section .time-left-info {
+      padding-top: 210px !important;
+    }*/
+  }
+  @media (min-width: 478px) and (max-width: 599px) {
+    .countdown {
+      zoom: 0.7 !important;
+      -moz-transform: scale(0.7) !important;
+      transform: scale(0.7) !important;
+    }
+    /*.main-section .time-left-info {
+      padding-top: 245px !important;
+    }*/
+  }
+  @media (min-width: 600px) and (max-width: 768px) {
+    /*.main-section .time-left-info {
+      padding-top: 280px !important;
+    }*/
+  }
+  
+  .countdown .flip-clock-divider .flip-clock-dot {
+    display: none;
+  }
+  
+  .countdown .flip-clock-divider .flip-clock-label {
+    top: 100%;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    padding-top: 20px;
+    font-size: 18px;
+  }
+  
+  .countdown .flip-clock-divider.days .flip-clock-label {
+    right: -90px;
+  }
+  
+  .countdown .flip-clock-divider.hours .flip-clock-label {
+    right: -99px;
+  }
+  
+  .countdown .flip-clock-divider.minutes .flip-clock-label {
+    right: -107px;
+  }
+  
+  .countdown.flip-clock-wrapper ul li a div div.inn {
+    color: #7b7463;
+    background-color: #f0f0f0;
+    font-size: 50px;
+    font-weight: 400;
+  }
+  
+  .countdown.flip-clock-wrapper .flip {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  .countdown.flip-clock-wrapper {
+    font-family: 'Rubik', sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 160px;
+    zoom: .75;
+    -moz-transform: scale(0.75);
+  }  
