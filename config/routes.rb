@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/lookup', to: 'backend#lookup'
+  
   root 'site#index'
 
   get '/index.html', to: 'site#index'
