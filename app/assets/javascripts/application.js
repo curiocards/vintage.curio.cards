@@ -17,7 +17,7 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require main
-//= require web3.min
-//= require google-analytics
-// require vending/vending
-// require_directory .
+//= require_directory ./external
+//= require gallery
+//= require lookup
+// require_directory vending

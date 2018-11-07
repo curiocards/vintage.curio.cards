@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  get '/lookup', to: 'backend#lookup'
+  
   root 'site#index'
 
   get '/index.html', to: 'site#index'
 
   get '/about', to: 'site#about'
+
+  get '/gallery', to: 'site#gallery'
 
   #get '/artist', to: 'site#artist'
   get '/artist/:username', to: 'site#artist', as: 'artist'

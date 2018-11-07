@@ -2,7 +2,7 @@
 // <div id="myval"></div>
   $( document ).ready(function() {
     let Web3 = require('web3');
-    let web3 = new Web3(new Web3.providers.HttpProvider('https://api.myetherapi.com/eth'));
+    let web3 = new Web3(new Web3.providers.HttpProvider('https://api.myetherwallet.com/eth'));
     let vendingJson = '[{"constant":true,"inputs":[],"name":"available","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"amountRaised","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"CloseVending","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"price","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"claimFunding","outputs":[],"payable":false,"type":"function"},{"inputs":[{"name":"holdingAddress","type":"address"},{"name":"token","type":"address"},{"name":"budget","type":"uint256"},{"name":"rate","type":"uint256"}],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"}]';
     let contractABI = JSON.parse(vendingJson);
     console.log(contractABI);

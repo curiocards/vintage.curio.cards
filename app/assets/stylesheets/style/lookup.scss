@@ -1,0 +1,50 @@
+// Body content CSS - Start
+body {
+  //box-sizing: border-box;
+  color:#373737;
+  background: #f2f2f2;
+  //font-size: 16px;
+  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Flex Container CSS - Start
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.flex-card_details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,.1);
+  margin: 10px;
+  width: 680px; // Total Width
+  padding: 10px
+}
+.flex-card_holder {
+  width: 150px; // Card width + margin*2
+  height: 200px;
+  margin: 10px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+.flex-card_holder img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.flex-details_holder {
+  width: 490px; // Details section width + padding*2
+  padding: 10px;
+}
+.flex-dummy {
+  margin: 10px;
+  width: 680px;
+  height: 0px;
+  // background-color: red;
+}
+// Flex Container CSS - End

@@ -7,4 +7,8 @@ class SiteController < ApplicationController
 
   def about
   end
+
+  def gallery
+  end
+
 end

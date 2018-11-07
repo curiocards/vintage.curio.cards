@@ -811,12 +811,3 @@ iframe {
 }
 
 
-/* Gallery css */
-  .cardImage {
-    opacity: 0.2;
-    filter: alpha(opacity=40); /* msie */
-  }
-  .cardImageOwned {
-    opacity: 1;
-    filter: alpha(opacity=100); /* msie */
-  }
