@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ipfs: MyString
+  card_name: MyString
+  card_addr: MyString
+  description: MyText
+  publish_date: 2018-11-07 12:31:26
+  max_supply: 1
+  remaining_supply: 1
+  vend_addr: MyString
+  vend_price: 1
+
+two:
+  ipfs: MyString
+  card_name: MyString
+  card_addr: MyString
+  description: MyText
+  publish_date: 2018-11-07 12:31:26
+  max_supply: 1
+  remaining_supply: 1
+  vend_addr: MyString
+  vend_price: 1

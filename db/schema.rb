@@ -10,9 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20181107203132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "artists", force: :cascade do |t|
+    t.string "username"
+    t.string "name"
+    t.string "avatar_filename"
+    t.text "bio"
+    t.string "bio_video"
+    t.string "twitter_username"
+    t.string "url_1"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cards", force: :cascade do |t|
+    t.string "ipfs"
+    t.string "card_name"
+    t.string "card_addr"
+    t.text "description"
+    t.datetime "publish_date"
+    t.integer "max_supply"
+    t.integer "remaining_supply"
+    t.string "vend_addr"
+    t.integer "vend_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "artist_id"
+    t.index ["artist_id"], name: "index_cards_on_artist_id"
+  end
+
+  add_foreign_key "cards", "artists"
 end
