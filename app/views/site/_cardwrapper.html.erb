@@ -4,7 +4,7 @@
             <div class="col-12 col-lg-6 card-item mx-auto">
                 <div class="card-image-holder">
                     <a href="#">
-                        <%= image_tag("/img/cards/#{id.to_s}.jpg", class: "card-image", alt: "Curio Card #{id.to_s}") %>
+                        <%= image_tag(cardImage(id), class: "card-image", alt: "Curio Card #{id.to_s}") %>
                     </a>
                 </div>
                 <div class="text-center down-arrow-grey">
