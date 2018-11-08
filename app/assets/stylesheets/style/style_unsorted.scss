@@ -7,16 +7,6 @@ iframe {
   border: none;
 }
 
-.main-section {
-  background: #f24645; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(45deg, #f24645 , #ebc08d); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(45deg, #f24645, #ebc08d); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(45deg, #f24645, #ebc08d); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(45deg, #f24645 , #ebc08d); /* Standard syntax */
-  color: #f0f0f0;
-  position: relative;
-}
-
 .bordered-item {
   border: 2px solid #f0f0f0;
   border-radius: 18px;
@@ -37,18 +27,6 @@ iframe {
   color: #f24645 !important;
 }
 
-.main-section .time-left-info {
-  font-size: 14px;
-  letter-spacing: 1.6px;
-  padding-top: 25px;
-}
-
-.main-section .down-section-info h3 {
-  font-size: 16px;
-  font-weight: 100;
-  letter-spacing: .6px;
-}
-
 .down-arrow-circle .fa {
   color: #f0f0f0;
   border: 1px solid;
@@ -60,11 +38,6 @@ iframe {
 
 .down-arrow-circle:hover {
   opacity: .8;
-}
-
-.down-section-info {
-  margin-top: 43px;
-  padding-bottom: 15px;
 }
 
 .video-section {
