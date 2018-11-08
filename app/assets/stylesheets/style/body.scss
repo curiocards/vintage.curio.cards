@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 35px;
   }
   
-  .body-button span {
+  .body-button a {
     color: #f24645;
     font-size: 18px;
     font-weight: 500;
@@ -31,18 +31,17 @@ h1, h2, h3, h4, h5, h6 {
     transition: .4s ease-in;
   }
   
-  .body-button span:hover {
+  .body-button a:hover {
     background-color: #f24645;
     color: #f0f0f0;
   }
   
   @media screen and (max-width: 480px) {
-    .body-button span {
+    .body-button a {
       font-size: 20px;
       padding: 8px 28px;
     }
   }
-
 
 /* Body formating - used in How to buy? */
 
