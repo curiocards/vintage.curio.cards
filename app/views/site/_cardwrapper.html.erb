@@ -1,6 +1,7 @@
 <div class="cards-wrapper">
     <div class="row cards-container">
-        <% card_id.each do |id| %>
+        <% card_id.each do |id| %> <!-- each card id that was passed in -->
+            <%# binding.pry %>
             <div class="col-12 col-lg-6 card-item mx-auto">
                 <div class="card-image-holder">
                     <a href="#">
@@ -30,7 +31,7 @@
                         <img src="img/price-tag.svg" alt="price">
                         <span>Amount Available:</span>
                         <p>
-                            <em id="output<%= id.to_s %>vend1supply">loading...</em> / 400</p>
+                            <em id="output<%= id.to_s %>vend1supply">loading...</em> / <%= @cards[id-1]["max_supply"].to_s %></p>
                         <p>0.0025 ETH/card</p>
                     </div>
                     <div class="item-label vm-address-item">
