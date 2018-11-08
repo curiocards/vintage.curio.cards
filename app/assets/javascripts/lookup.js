@@ -17,15 +17,15 @@ $('document').ready(function() { // Start the detect lookup page code
   let cardInfoABI = JSON.parse(cardInfoABIraw);
   
   let cardInfoArray = [ // cardInfoArray[0].card
-    { id: '1.1', card: '0x6Aa2044C7A0f9e2758EdAE97247B03a0D7e73d6c', vend: '0x1792b673de93af7050114b021a706b2eabe595e2' },
+    { id: '1.1', card: '0x6Aa2044C7A0f9e2758EdAE97247B03a0D7e73d6c', vend: '0x964b016c9549d0b8f1991d0ec6d6d822099ea95f' },
     { id: '1.2', card: '0x6Aa2044C7A0f9e2758EdAE97247B03a0D7e73d6c', vend: '0x1d3c5728b682a82132b59c18e56eb4170c4d543b' },
-    { id: '1.3', card: '0x6Aa2044C7A0f9e2758EdAE97247B03a0D7e73d6c', vend: '0x964b016c9549d0b8f1991d0ec6d6d822099ea95f' },
+    { id: '1.3', card: '0x6Aa2044C7A0f9e2758EdAE97247B03a0D7e73d6c', vend: '0x1792b673de93af7050114b021a706b2eabe595e2' },
     { id: '2.1', card: '0xE9A6A26598B05dB855483fF5eCc5f1d0C81140c8', vend: '0xc3f35591cb6a8f56c581bc9396c190719973cce7' },
     { id: '2.2', card: '0xE9A6A26598B05dB855483fF5eCc5f1d0C81140c8', vend: '0xefe7b3f041c563e90870af5bb74ae3a2afc217c5' },
     { id: '2.3', card: '0xE9A6A26598B05dB855483fF5eCc5f1d0C81140c8', vend: '0x76b517f253f8a8bac8c36e365b02a2ff6e2a0d96' },
     { id: '3.1', card: '0x3f8131B6E62472CEea9cb8Aa67d87425248a3702', vend: '0x8e1399b884f8202eb4e7e7861878f2de4c1f529e' },
-    { id: '3.2', card: '0x3f8131B6E62472CEea9cb8Aa67d87425248a3702', vend: '0x7f3d8086bcf7c94476bb794875c349f3b4b1a108' },
-    { id: '3.3', card: '0x3f8131B6E62472CEea9cb8Aa67d87425248a3702', vend: '0x427660b9d5f56a067915f38be3080ddc668276d9' },
+    { id: '3.2', card: '0x3f8131B6E62472CEea9cb8Aa67d87425248a3702', vend: '0x427660b9d5f56a067915f38be3080ddc668276d9' },
+    { id: '3.3', card: '0x3f8131B6E62472CEea9cb8Aa67d87425248a3702', vend: '0x7f3d8086bcf7c94476bb794875c349f3b4b1a108' },
     { id: '4', card: '0x4F1694be039e447B729ab11653304232Ae143C69', vend: '0xb439fa46F991908396fDF9D8911C91C3125E42D7' },
     { id: '5', card: '0x5a3D4A8575a688b53E8b270b5C1f26fd63065219', vend: '0xB885B6F499694c912aBA2cd9A8D524b1d8cEceE8' },
     { id: '6', card: '0x1Ca6AC0Ce771094F0F8a383D46BF3acC9a5BF27f', vend: '0xE060618270ff55F74a313c1D5Aa616757d21E1c6' },
@@ -96,14 +96,6 @@ $('document').ready(function() { // Start the detect lookup page code
   // Create card html and fill it with images and data 
   function populateCardHtml() {
     function cardTpl(id) {
-      let cardHtml_ =  '<div id="cardInfo'+id+'" class="col-sm-3">' + // ToDo: swap out with flex boxs
-                        '<img id="cardImage'+id+'" width="100">' +
-                        '<div id="cardAddr'+id+'"></div>' +
-                        '<div id="vendingAddr'+id+'"></div>' +
-                        '<div id="vendingSupply'+id+'"></div>' +
-                        //'<div id="totalSupply'+id+'"></div>' +
-                        '<div id="ipfsURL'+id+'"></div>' +
-                      '</div>';
       let cardHtml = '<div class="flex-card_details">' +
                         '<div class="flex-card_holder">' +
                           '<img id="cardImage'+id+'">' + //width="100"
@@ -111,11 +103,13 @@ $('document').ready(function() { // Start the detect lookup page code
                         '<div class="flex-details_holder">' +
                           '<h3>Card Info</h3>' +
                           '<div id="cardAddr'+id+'"></div>' +
+                          '<div id="cardSupply'+id+'"></div>' +
                           '<div id="ipfsURL'+id+'"></div>' +
                           '<br>' +
                           '<h3>Vending Info</h3>' +
                           '<div id="vendingAddr'+id+'"></div>' +
                           '<div id="vendingSupply'+id+'"></div>' +
+                          '<div id="vendingPrice'+id+'"></div>' +
                           '<br>' +
                         '</div>' +
                       '</div>';
@@ -135,6 +129,7 @@ $('document').ready(function() { // Start the detect lookup page code
   function populateCardInfo() {
     for (let i=0; i<cardInfoArray.length;++i) {
       let contractId = cardInfoArray[i].card;
+      let contractInst = getCardContractInst(contractId);
       let ipfsSrc = null;
       // Images
       localforage.getItem("ipfs-"+contractId, function(err, ipfsStr) {
@@ -142,7 +137,6 @@ $('document').ready(function() { // Start the detect lookup page code
           console.err("failed to get ipfs id for contract "+contractId);
         }
         else if (ipfsStr === null) {
-          let contractInst = getCardContractInst(contractId);
           let ipfsHash = contractInst.ipfs_hash().toString();
           let ipfsSrc = "https://ipfs.io/ipfs/"+ipfsHash;
           $("#cardImage"+i).attr("src", ipfsSrc);
@@ -157,7 +151,9 @@ $('document').ready(function() { // Start the detect lookup page code
       });
       // Contract data
       let cardAddr = contractId.toString();
+      let cardSupply = contractInst.totalSupply().toString();
       $('#cardAddr'+i).html('<b>Card Address:</b> ' + cardAddr);
+      $('#cardSupply'+i).html('<b>Total Amount:</b> ' + cardSupply);
 
     }
   }
@@ -167,9 +163,11 @@ $('document').ready(function() { // Start the detect lookup page code
       let contractId = cardInfoArray[i].vend;
       let contractInst = getVendContractInst(contractId);
       let supply = contractInst.available().toString();
+      let price = contractInst.price().toString();
       let vendAddr = contractId.toString();
       $('#vendingAddr'+i).html('<b>Vend Address:</b> ' + vendAddr);
       $('#vendingSupply'+i).html('<b>Vend Supply:</b> ' + supply);
+      $('#vendingPrice'+i).html('<b>Vend Price:</b> ' + price / Number("1.0E18")); // ruby: ("%f" % "1.0e+18")
     }
   }
 
