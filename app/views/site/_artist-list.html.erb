@@ -6,13 +6,16 @@
 </div>
 <br>
 
-<!-- put in a loop with artist.url and artist.name model info -->
-
+<!-- loop the artists name and url -->
+<% @artists.reverse_each do |artist| %>
   <div class="body-button text-center">
-    <a href="thoros.html">
-      <span class="text-uppercase">Thoros of Myr</span>
-    </a>
+    <%= link_to artist.name.to_s, artist_path(username: artist.username), class: "text-uppercase" %>
   </div>
+<% end %>
+
+
+<br>
+
   <div class="body-button text-center">
     <a href="marisol.html">
       <span class="text-uppercase">Marisol Vengas</span>
