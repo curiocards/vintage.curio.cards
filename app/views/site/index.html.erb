@@ -1,9 +1,9 @@
-<%= render partial: "navbar" %> <!-- Note: this is the index page version of the navbar-->
+<%= render partial: "navbar" %> <!-- Note: this is the index page version. Change it to accept varaibles to use on other pages -->
 
 <section id="main-section" class="main-section">
   <!--<div class="countdown mx-auto" id="countdown"></div> -->
 
-  <div class="text-center time-left-info">
+  <%# <div class="text-center time-left-info">
     <div class="down-section-info text-center">
       <!-- <h3 class="text-uppercase">View current cards</h3>
       <div class="down-arrow-circle arrow-white text-center">
@@ -12,7 +12,7 @@
           <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
         </a> -->
     </div>
-  </div>
+  </div> %>
 </section>
 
 <%= render partial: "title-line", locals: { title: "New Card Voting" } %>
@@ -30,59 +30,13 @@
   </div>
 </div>
 
-<%= render partial: "title-line", locals: { title: "Featured cards Available" } %>
+<%= render partial: "title-line", locals: { title: "Featured Cards" } %>
 <%= render partial: "cardwrapper", locals: { card_id: [28, 29, 30] } %>
 
-<%= render partial: "title-line", locals: { title: "The Artists" } %>
-<div class="text-center body-content">
-  <h3>Check out the artist pages to find more currently available cards</h3>
-</div>
-<br>
-
-<!-- put in a loop with artist.url and artist.name model info -->
-
-  <div class="body-button text-center">
-    <a href="thoros.html">
-      <span class="text-uppercase">Thoros of Myr</span>
-    </a>
-  </div>
-  <div class="body-button text-center">
-    <a href="marisol.html">
-      <span class="text-uppercase">Marisol Vengas</span>
-    </a>
-  </div>
-  <div class="body-button text-center">
-    <a href="daniel.html">
-      <span class="text-uppercase">Daniel Friedman</span>
-    </a>
-  </div>
-  <div class="body-button text-center">
-    <a href="robek.html">
-      <span class="text-uppercase">Robek World</span>
-    </a>
-  </div>
-  <div class="body-button text-center">
-    <a href="cryptopop.html">
-      <span class="text-uppercase">Cryptopop</span>
-    </a>
-  </div>
-  <div class="body-button text-center">
-    <a href="cryptograffiti.html">
-      <span class="text-uppercase">Cryptograffiti</span>
-    </a>
-  </div>
-  <!--
-    <div class="body-button text-center">
-      <a href="phneep.html"><span class="text-uppercase">Phneep</span></a>
-    </div>
-  -->
-
-<br>
+<%= render partial: "artist-list" %>
 
 <%= render partial: "how-to-buy" %>
 
 <br><br>
 
-<!-- Start of FAQ section -->
 <%= render partial: "faq" %>
-<!-- End of FAQ section -->

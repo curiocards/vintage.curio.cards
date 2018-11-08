@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/index.html', to: 'site#index'
 
-  get '/about', to: 'site#about'
+  # get '/about', to: 'site#about'
 
   get '/gallery', to: 'site#gallery'
 
