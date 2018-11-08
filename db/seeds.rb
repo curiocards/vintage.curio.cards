@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
-# require 'pry'
 
 cards_array = CSV.read(Rails.root.join('scratch/card_info.csv'))
 artists_array = CSV.read(Rails.root.join('scratch/artist_info.csv'))
