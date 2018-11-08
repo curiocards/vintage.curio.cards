@@ -6,6 +6,7 @@
   background: linear-gradient(45deg, #f24645 , #ebc08d); /* Standard syntax */
   color: #f0f0f0;
   position: absolute; // puts the navbar above the body top padding
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
     nav.page-navbar .nav-item {
