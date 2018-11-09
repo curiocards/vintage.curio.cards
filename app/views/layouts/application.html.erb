@@ -18,6 +18,8 @@
 
   <body class="<%= params[:action] %>"> <!-- sets the contoller name as a class for controller specific js -->
 
+    <%= render partial: "navbar" %> 
+    
     <%= yield %>
 
     <%= render partial: "footer" %>
