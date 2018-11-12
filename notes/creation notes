@@ -13,6 +13,10 @@ rails g migration AddArtistToCards artist:references
 (optional) switch to stage or prod .env
 heroku local:run rails db:migrate
 
+4) add to artist.rb model:
+  has_many :cards
+
+5)
 Check schema.rb
 Check the database
 
