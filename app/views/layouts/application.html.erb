@@ -19,9 +19,12 @@
   <body class="<%= params[:action] %>"> <!-- sets the contoller name as a class for controller specific js -->
 
     <%= render partial: "navbar" %> 
-    
+
     <%= yield %>
 
+    <%= render partial: "how-to-buy" %>
+    <br><br>
+    <%= render partial: "faq" %>
     <%= render partial: "footer" %>
     
     <%= javascript_include_tag 'application' %>
