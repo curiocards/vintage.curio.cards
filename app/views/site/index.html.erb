@@ -13,12 +13,7 @@
 </div>
 
 <%= render partial: "title-line", locals: { title: "Featured Cards" } %>
-<%= render partial: "cardwrapper", locals: { card_id: [28, 29, 30] } %>
+
+<%= render partial: "cardwrapper", locals: { cards: @feat } %>
 
 <%= render partial: "artist-list" %>
-
-<%= render partial: "how-to-buy" %>
-
-<br><br>
-
-<%= render partial: "faq" %>

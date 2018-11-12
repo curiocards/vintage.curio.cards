@@ -1,20 +1,23 @@
 <div class="cards-wrapper">
     <div class="row cards-container">
-        <% card_id.each do |id| %> <!-- each card id that was passed in -->
+    <%# binding.pry %>
+    <%# cards[0].id,cards[0].max_supply %> 
+        <% cards.each do |card| %>
+            <%# card.id, card.max_supply%>
             <%# binding.pry %>
             <div class="col-12 col-lg-6 card-item mx-auto">
                 <div class="card-image-holder">
                     <a href="#">
-                        <%= image_tag(cardImage(id), class: "card-image", alt: "Curio Card #{id.to_s}") %>
+                        <%= image_tag(cardImage(card.id), class: "card-image", alt: "Curio Card #{card.id.to_s}") %>
                     </a>
                 </div>
                 <div class="text-center down-arrow-grey">
                     <!-- click this link will scrool to div#card-1 -->
-                    <a href="#card-<%= id.to_s %>">
+                    <a href="#card-<%= card.id.to_s %>">
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div id="card-<%= id.to_s %>" class="card-details">
+                <div id="card-<%= card.id.to_s %>" class="card-details">
                     <div class="item-label card-address-item">
                         <img class="bigger-icon" src="img/ethereum-logo.svg" alt="address">
                         <span>Card Address:</span>
@@ -25,13 +28,13 @@
                         </div>
                         -->
                     <div class="card-address">
-                        <span id="outputcard<%= id.to_s %>addr">loading...</span>
+                        <span id="outputcard<%= card.id.to_s %>addr">loading...</span>
                     </div>
                     <div class="item-label amount-item mb-3">
                         <img src="img/price-tag.svg" alt="price">
                         <span>Amount Available:</span>
                         <p>
-                            <em id="output<%= id.to_s %>vend1supply">loading...</em> / <%= @cards[id-1]["max_supply"].to_s %></p>
+                            <em id="output<%= card.id.to_s %>vend1supply">loading...</em> / <%= card.max_supply.to_s %></p>
                         <p>0.0025 ETH/card</p>
                     </div>
                     <div class="item-label vm-address-item">
@@ -39,7 +42,7 @@
                         <span>VM Address:</span>
                     </div>
                     <div class="vm-address">
-                        <span id="outputcard<%= id.to_s %>vend1addr">loading...</span>
+                        <span id="outputcard<%= card.id.to_s %>vend1addr">loading...</span>
                     </div>
                 </div>
             </div>
