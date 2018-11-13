@@ -1,5 +1,5 @@
 body {
-  padding-top: 40px; /* making room for the navbar */
+  padding-top: 100px; /* making room for the navbar */
   background: #f0f0f0;
   font-family: 'Rubik', sans-serif;
   overflow-x: hidden;
@@ -45,14 +45,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* title with side lines */
 .title-line {
-  margin-top: 63px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .title-line .heading {
   position: relative;
   height: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 
@@ -258,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .body-format .how-to-buy .steps-container p {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 100;
     line-height: 1.3em;
     margin-top: 24px;

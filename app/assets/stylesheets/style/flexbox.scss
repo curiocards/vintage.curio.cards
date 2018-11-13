@@ -1,0 +1,94 @@
+// Flex Container CSS - Start
+
+// Artist Details
+.page-container {
+  //background-color: Silver;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.flex-artist {
+  background-color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,.1);
+  margin: 10px;
+  margin-top: 0px !important;
+  padding: 30px;
+  //width: 840px;
+}
+.flex-artist.center {
+  font-size: 20px;
+  text-align:center;
+}
+.flex-artist.center iframe {
+  display: block;
+}
+
+// Imported
+.flex-container {
+  //background-color: Silver;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.flex-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.flex-card_details {
+  //background-color: Silver;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,.1);
+  margin: 10px;
+  width: 840px;
+  padding-top: 10px;
+}
+.flex-card_holder {
+  width: 320px;
+  padding: 10px;
+}
+.flex-details_holder {
+  max-width: 500px;
+  //width: 500px;
+  //margin-left: 20px;
+  //margin-right: 20px;
+  padding: 10px;
+}
+.flex-card {
+  background-color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,.1);
+  padding-top: 10px;
+  margin: 10px;
+  width: 320px;
+  height: 575px;
+  //min-width: 300px;
+}
+.flex-card-gold {
+  background-color: khaki !important;
+}
+.flex-card p {
+  word-wrap: break-word;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.flex-artist_details {
+  background-color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,.1);
+  margin: 10px;
+  width: 840px;
+  padding: 25px;
+}
+.flex-dummy {
+  margin: 10px;
+  width: 320px;
+  height: 0px;
+}
+.flex-container th, td {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+// Flex Container CSS - End
