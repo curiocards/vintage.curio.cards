@@ -19,7 +19,7 @@
                 </div>
                 <div id="card-<%= card.id.to_s %>" class="card-details">
                     <div class="item-label card-address-item">
-                        <img class="bigger-icon" src="img/ethereum-logo.svg" alt="address">
+                        <img class="bigger-icon" src="/img/ethereum-logo.svg" alt="address">
                         <span>Card Address:</span>
                     </div>
                     <!--
@@ -31,14 +31,14 @@
                         <span id="outputcard<%= card.id.to_s %>addr">loading...</span>
                     </div>
                     <div class="item-label amount-item mb-3">
-                        <img src="img/price-tag.svg" alt="price">
+                        <img src="/img/price-tag.svg" alt="price">
                         <span>Amount Available:</span>
                         <p>
                             <em id="output<%= card.id.to_s %>vend1supply">loading...</em> / <%= card.max_supply.to_s %></p>
                         <p>0.0025 ETH/card</p>
                     </div>
                     <div class="item-label vm-address-item">
-                        <img src="img/shopping-cart.svg" alt="shopping-cart">
+                        <img src="/img/shopping-cart.svg" alt="shopping-cart">
                         <span>VM Address:</span>
                     </div>
                     <div class="vm-address">
