@@ -23,5 +23,9 @@ module ApplicationHelper
       # ToDo: try to return the cards https://ipfs location before doing ""
     end
   end
+
+  def title(page_title)
+    content_for :title, page_title.to_s
+  end
     
 end
