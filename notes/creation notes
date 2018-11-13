@@ -20,6 +20,10 @@ heroku local:run rails db:migrate
 Check schema.rb
 Check the database
 
+6) seed data:
+  - export data from source to csv. note: don't use mm/dd/yyyy format
+  - run seed script
+
 --------
 
 toggle between which db to use with localhost:
