@@ -1,3 +1,5 @@
+<% title "Curio Card Vote" %>
+
 <div id="cards-section"></div> <!-- ref for navbar cards button -->
 
 <%= render partial: "title-line", locals: { title: "New Card Voting" } %>
@@ -13,7 +15,7 @@
 </div>
 
 <%= render partial: "title-line", locals: { title: "Featured Cards" } %>
-
-<%= render partial: "cardwrapper", locals: { cards: @feat } %>
+<%#binding.pry%>
+<%= render partial: "cardwrapper", locals: { cards: @last } %>
 
 <%= render partial: "artist-list" %>
