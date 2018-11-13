@@ -1,2 +1,40 @@
-<h1>Site#artist</h1>
-<p>Find me in app/views/site/artist.html.erb</p>
+<% title "Curio: " + @artist.username %>
+
+<div id="cards-section"></div> <!-- ref for navbar cards button -->
+
+<%= render partial: "title-line", locals: { title: @artist.name.to_s } %>
+<div class="text-center body-content">
+  <h3>100% of sales go directly to the artist</h3>
+  
+</div>
+<div class="page-container">
+  <div class="flex-artist center">
+    <b>Artist:</b> <%= @artist.name %>
+    <br>
+    <% if @artist.twitter_username != "" && @artist.twitter_username != nil %>
+      <b>Twitter: </b>
+      <a href="https://twitter.com/<%= @artist.twitter_username.to_s %>" target="_blank"><%= @artist.twitter_username.to_s %></a>
+      <br>
+    <% end %>
+    <% if @artist.url_1 != "" && @artist.url_1 != nil %>
+      <b>Link: </b><a href="<%= @artist.url_1.to_s %>" target="_blank"><%= @artist.url_1.to_s %></a>
+      <br>
+    <% end %>
+    <% if @artist.bio != "" && @artist.bio != nil %>
+      <b>Bio: </b><%= @artist.bio.to_s %> 
+      <br>
+    <% end %>
+    <% if @artist.bio_video.present? %>
+      <iframe width="560" height="315" src="<%= @artist.bio_video.to_s %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <% end %>
+  </div>
+</div>
+
+<%= render partial: "title-line", locals: { title: "Cards" } %>
+
+<% @grouped_cards.reverse_each do |date, cards| %>
+  <div class="text-center body-content">
+    <h1><%= date.strftime("%A %B %d, %Y") %></h1>
+  </div>
+  <%= render partial: "cardwrapper", locals: { cards: cards } %>
+<% end %>

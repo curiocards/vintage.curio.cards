@@ -22,8 +22,13 @@ class SiteController < ApplicationController
 
   private
     def set_artist
+      # Returns the artist model object by there username
       @artist = Artist.find_by_username(params[:username])
-      @cards = Card.by_artist_username(params[:username]) # custom scope from card.rb
+
+      # Custom scope from card.rb takes the artist username, finds artist id, finds all cards associated with it
+      # List of cards is then grouped by publish_date, and sorted
+      @grouped_cards = Card.by_artist_username(params[:username]).group_by{|card| card.publish_date}.sort 
+
       # binding.pry
     end
 
