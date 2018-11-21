@@ -4,13 +4,11 @@ Bugs:
 ToDo:
 - Switch cardwrapper price to show from DB
 - Clean up artist list on index
+- Remove buying addresses untill after upgrade
 - Address the todo's in the cardImage helper
 - Add 404 page (example: invalid artist url)
 - Add signature check and/or local files for all css and external resources
     - Don't forget about css and etc loaded in the application view
-- Break out index defs in controller to private methods
-- Add a max width to the artist details box
-- Make the How To Buy line text bigger, same as the other titles
 - Test on mobile
 - Change how card info is shown:
     - make flip over?
