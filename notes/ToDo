@@ -1,0 +1,53 @@
+Bugs:
+- (bug) fix the weird half second lockup delay on index page load. only in ffox?
+
+ToDo:
+- Switch cardwrapper price to show from DB
+- Clean up artist list on index
+- Address the todo's in the cardImage helper
+- Add 404 page (example: invalid artist url)
+- Add signature check and/or local files for all css and external resources
+    - Don't forget about css and etc loaded in the application view
+- Break out index defs in controller to private methods
+- Add a max width to the artist details box
+- Make the How To Buy line text bigger, same as the other titles
+- Test on mobile
+- Change how card info is shown:
+    - make flip over?
+    - add banner edge on bottom ala new mockups?
+    - hybrid?
+- Add how-to page (about view)
+- Switch the client side JS web3 fetching with db info. Possible methods to update the db info:
+    - Create js caching system
+        - User requests page, system checks how long since the last update
+        - if its been recently enough, page loads normal
+        - If its been over an amount of time, it runs js to fetch all the web3 stuff
+        - the stuff is put into the db, and timestamped
+        - page loads
+    - Make a 'go get stuff' endpoint
+        - setup a server to curl that endpoint at regular times
+        - have a status page that shows the last time the curl happened
+    - Endpoint, but...
+        - use a site that monitors for change as the curler, like https://visualping.io/
+- Look through db calls in scope and etc and add limits
+    - limit 1 means it stops searching after ti find 1, not that it only searches the first 1
+
+Wishlist:
+- Add 'all cards' page
+- Add 'single card' page
+- Check if valid username or card id before loading user or card page
+    - # Card.by_artist("robekworld").exists checks if valid username faster than .present?
+    - Card.first, Card.last, check id, defined as range.
+- If no jpg or png or gif avalible, pull from ipfs
+- Switch card wrapper to flexbox (currently managed in unsorted)
+    - delete all the old 'media type' css styles for the cards
+    - delete card-container stuff from the unsorted css
+- Sort and delete the unsorted css file
+- Switch gallery over to local images, not ipfs
+    - Have ipfs links
+    - Insert a 'load from ipfs' button to clear and pull them the old way
+- Metamask
+    - Impliment Metamask buying
+    - add how to migrate old card keys to Metamask
+    - get rid of old wallet, dehost
+
