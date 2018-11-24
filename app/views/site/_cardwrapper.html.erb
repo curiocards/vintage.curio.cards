@@ -35,7 +35,7 @@
                         <span>Amount Available:</span>
                         <p>
                             <em id="output<%= card.id.to_s %>vend1supply">loading...</em> / <%= card.max_supply.to_s %></p>
-                        <p>0.0025 ETH/card</p>
+                        <p><%= card.vend_price.to_s %> | 0.0025 ETH/card</p>
                     </div>
                     <div class="item-label vm-address-item">
                         <img src="/img/shopping-cart.svg" alt="shopping-cart">

@@ -1,20 +1,13 @@
 Bugs:
 - (bug) fix the weird half second lockup delay on index page load. only in ffox?
 
+Current - eth update in db
+1) Make ruby that fetches all the info from api
+2) Sanitize date from sql injection and insert it in to the db
+3) Stats page that says when the last time this happened was
+4) devise system to trigger fetch when its been to long. See update notes in top ToDo.
+
 ToDo:
-- Switch cardwrapper price to show from DB
-- Clean up artist list on index
-- Remove buying addresses untill after upgrade
-- Address the todo's in the cardImage helper
-- Add 404 page (example: invalid artist url)
-- Add signature check and/or local files for all css and external resources
-    - Don't forget about css and etc loaded in the application view
-- Test on mobile
-- Change how card info is shown:
-    - make flip over?
-    - add banner edge on bottom ala new mockups?
-    - hybrid?
-- Add how-to page (about view)
 - Switch the client side JS web3 fetching with db info. Possible methods to update the db info:
     - Create js caching system
         - User requests page, system checks how long since the last update
@@ -27,6 +20,20 @@ ToDo:
         - have a status page that shows the last time the curl happened
     - Endpoint, but...
         - use a site that monitors for change as the curler, like https://visualping.io/
+
+- Switch cardwrapper price to show from DB
+- Remove buying addresses, untill after upgrade
+- Address the todo's in the cardImage helper
+- Add 404 page (example: invalid artist url)
+- Add signature check and/or local files for all css and external resources
+    - Don't forget about css and etc loaded in the application view
+- Test on mobile
+- Change how card info is shown:
+    - make flip over?
+    - add banner edge on bottom ala new mockups?
+    - hybrid?
+- Add how-to page (about view)
+
 - Look through db calls in scope and etc and add limits
     - limit 1 means it stops searching after ti find 1, not that it only searches the first 1
 
