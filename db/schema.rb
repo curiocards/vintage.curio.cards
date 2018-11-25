@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20181107203132) do
     t.integer "max_supply"
     t.integer "remaining_supply"
     t.string "vend_addr"
-    t.integer "vend_price"
+    t.decimal "vend_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "artist_id"

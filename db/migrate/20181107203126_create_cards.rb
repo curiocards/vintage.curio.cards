@@ -9,7 +9,7 @@ class CreateCards < ActiveRecord::Migration[5.1]
       t.integer :max_supply
       t.integer :remaining_supply
       t.string :vend_addr
-      t.integer :vend_price
+      t.decimal :vend_price
 
       t.timestamps
     end
