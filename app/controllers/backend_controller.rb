@@ -4,6 +4,16 @@ class BackendController < ApplicationController
   # before_action :updateStatic, only: [:stats]
   # before_action :updateActive, only: [:stats]
 
+  # Notes
+    # "https://ipfs.io/ipfs/"+ipfsHash;
+    # Do all cards have the total supply info in the db?
+
+    # another way to save new record:
+    # user = User.new
+    # user.name = "David"
+    # user.occupation = "Code Artist"
+    # user.save
+
   def lookup
   end
 
@@ -68,6 +78,8 @@ class BackendController < ApplicationController
       card.update(ipfs: c[:card_ipfs])
       card.update(vend_price: c[:vend_price])
     end
+
+    Stat.create(action: "staticUpdate", notes: "Update run on ipfs hashes and vending machine prices")
   end
 
   def updateActive
@@ -103,9 +115,8 @@ class BackendController < ApplicationController
       card = Card.find_by(id: c[:card_id])
       card.update(remaining_supply: c[:vend_supply])
     end
-  end
 
-    # "https://ipfs.io/ipfs/"+ipfsHash;
-    # Do all cards have the total supply info in the db?
+    Stat.create(action: "activeUpdate", notes: "Update run on vending machine remaining supply")
+  end
 
 end
