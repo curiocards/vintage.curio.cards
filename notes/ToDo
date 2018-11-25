@@ -8,6 +8,7 @@ Current - eth update in db
 4) devise system to trigger fetch when its been to long. See update notes in top ToDo.
 
 ToDo:
+- switch to 'sold out' if 0 vend supply
 - put in "@var ||= thing" where ever can cache assignments, like in the web3 code. If done before, don't do again just use previous
     - Does this not work? putting the following in controller shows its still running the db call each time and not remembering:
         puts @last
@@ -25,7 +26,8 @@ ToDo:
         - have a status page that shows the last time the curl happened
     - Endpoint, but...
         - use a site that monitors for change as the curler, like https://visualping.io/
-
+- convert lookup page to js vs. ruby mode
+- fix layout css call
 - Switch cardwrapper price to show from DB
 - Remove buying addresses, untill after upgrade
 - Address the todo's in the cardImage helper
