@@ -54,6 +54,9 @@ $('document').ready(function() { // Start the detect lookup page code
     { id: '29', card: '0xD3540bCD9c2819771F9D765Edc189cBD915FEAbd', vend: '0x39B058eC8B2fa19Cec655A87EaC127Ba434111b1' },
     { id: '30', card: '0x7f5b230dc580d1e67df6ed30dee82684dd113d1f', vend: '0x338C6fbcEff5433412382590a7de6da03Bb57389' },
   ];
+
+  let numloops = cardInfoArray.length;
+  //let numloops = 3;
   
   // Get card contract 
   let cardContract = null;
@@ -121,14 +124,14 @@ $('document').ready(function() { // Start the detect lookup page code
                           '<div class="flex-card-dummy"></div>' +
                           '<div class="flex-card-dummy"></div>';
     let cardContainer = $("#info-container");
-    for (let i=0; i<cardInfoArray.length;++i) {
+    for (let i=0; i<numloops;++i) {
       cardContainer.append( cardTpl(i) );
     }
     cardContainer.append(cardHtmlBuffer);
   }
   
   function populateCardInfo() {
-    for (let i=0; i<cardInfoArray.length;++i) {
+    for (let i=0; i<numloops;++i) {
       let contractId = cardInfoArray[i].card;
       let contractInst = getCardContractInst(contractId);
       let ipfsSrc = null;
@@ -160,7 +163,7 @@ $('document').ready(function() { // Start the detect lookup page code
   }
   
   function populateVendInfo() {
-    for (let i=0; i<cardInfoArray.length;++i) {
+    for (let i=0; i<numloops;++i) {
       let contractId = cardInfoArray[i].vend;
       let contractInst = getVendContractInst(contractId);
       let supply = contractInst.available().toString();
