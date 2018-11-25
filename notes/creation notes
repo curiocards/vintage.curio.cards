@@ -1,6 +1,7 @@
 Model generation commands:
 
 1) Run:
+rails g model Stat action:string notes:text
 rails g model Artist username:string name:string avatar_filename:string bio:text bio_video:string twitter_username:string url_1:string
 rails g model Card ipfs:string card_name:string card_addr:string description:text publish_date:timestamp max_supply:integer remaining_supply:integer vend_addr:string vend_price:decimal
 rails g migration AddArtistToCards artist:references
