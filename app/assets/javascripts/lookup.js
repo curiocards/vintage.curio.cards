@@ -96,8 +96,8 @@ $('document').ready(function() { // Start the detect lookup page code
   // Create card html and fill it with images and data 
   function populateCardHtml() {
     function cardTpl(id) {
-      let cardHtml = '<div class="flex-card_details">' +
-                        '<div class="flex-card_holder">' +
+      let cardHtml = '<div class="flex-card_holder">' +
+                        '<div class="flex-img_holder">' +
                           '<img id="cardImage'+id+'">' + //width="100"
                         '</div>' +
                         '<div class="flex-details_holder">' +
@@ -115,10 +115,11 @@ $('document').ready(function() { // Start the detect lookup page code
                       '</div>';
       return cardHtml;
     }
-    let cardHtmlBuffer =  '<div class="flex-dummy"></div>' +
-                          '<div class="flex-dummy"></div>' +
-                          '<div class="flex-dummy"></div>' +
-                          '<div class="flex-dummy"></div>';
+    let cardHtmlBuffer =  '<div class="flex-card-dummy"></div>' +
+                          '<div class="flex-card-dummy"></div>' +
+                          '<div class="flex-card-dummy"></div>' +
+                          '<div class="flex-card-dummy"></div>' +
+                          '<div class="flex-card-dummy"></div>';
     let cardContainer = $("#info-container");
     for (let i=0; i<cardInfoArray.length;++i) {
       cardContainer.append( cardTpl(i) );
