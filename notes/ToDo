@@ -2,30 +2,24 @@ Bugs:
 - (bug) fix the weird half second lockup delay on index page load. only in ffox?
 
 Current - eth update in db
-1) Make ruby that fetches all the info from api
-2) Sanitize date from sql injection and insert it in to the db
-3) Stats page that says when the last time this happened was
+
 4) devise system to trigger fetch when its been to long. See update notes in top ToDo.
+
+Stats update page trigger:
+- controller loads web3 and active data update
+Two options: external server curls data -or- user triggers
+- going with https://visualping.io/
+- update is recorded in stats db, displayed in stats view
 
 ToDo:
 - switch to 'sold out' if 0 vend supply
+- db data accurate? some of the update data might be wrong, like supply on 1-14
 - put in "@var ||= thing" where ever can cache assignments, like in the web3 code. If done before, don't do again just use previous
     - Does this not work? putting the following in controller shows its still running the db call each time and not remembering:
         puts @last
         @last ||= Card.last(3) 
         puts @last
-- Switch the client side JS web3 fetching with db info. Possible methods to update the db info:
-    - Create js caching system
-        - User requests page, system checks how long since the last update
-        - if its been recently enough, page loads normal
-        - If its been over an amount of time, it runs js to fetch all the web3 stuff
-        - the stuff is put into the db, and timestamped
-        - page loads
-    - Make a 'go get stuff' endpoint
-        - setup a server to curl that endpoint at regular times
-        - have a status page that shows the last time the curl happened
-    - Endpoint, but...
-        - use a site that monitors for change as the curler, like https://visualping.io/
+- Insert a delay into the active lookups. time how long it takes.
 - convert lookup page to js vs. ruby mode
 - fix layout css call
 - Switch cardwrapper price to show from DB
@@ -40,9 +34,11 @@ ToDo:
     - add banner edge on bottom ala new mockups?
     - hybrid?
 - Add how-to page (about view)
-
 - Look through db calls in scope and etc and add limits
     - limit 1 means it stops searching after ti find 1, not that it only searches the first 1
+- general security review: check out rails security best practices, search all app for issues
+    https://guides.rubyonrails.org/security.html
+    https://blog.sqreen.io/preventing-sql-injections-in-ruby/
 
 Wishlist:
 - Add 'all cards' page
@@ -62,4 +58,9 @@ Wishlist:
     - Impliment Metamask buying
     - add how to migrate old card keys to Metamask
     - get rid of old wallet, dehost
+- Create user update trigger to remove dependance on visualping
+    - Page loads normal for user, but background process starts:
+        - checks how long since the last update
+        - If its been over an amount of time, triggers update
+        - update recorded in stats
 

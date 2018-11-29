@@ -1,8 +1,8 @@
 class BackendController < ApplicationController
 
-  # before_action :webInit, only: [:stats]
-  # before_action :updateStatic, only: [:stats]
-  # before_action :updateActive, only: [:stats]
+  before_action :webInit, only: [:update]
+  # before_action :updateStatic, only: [:update]
+  before_action :updateActive, only: [:update]
 
   # Notes
     # "https://ipfs.io/ipfs/"+ipfsHash;
@@ -21,6 +21,7 @@ class BackendController < ApplicationController
   end
 
   def stats
+    @stats = Stat.all
   end
 
   private
@@ -83,7 +84,7 @@ class BackendController < ApplicationController
   end
 
   def updateActive
-    # Update what changes often: Vend supply
+    # Update only what changes often: Vend supply
     cards = Card.all
     @cardArray = []
 

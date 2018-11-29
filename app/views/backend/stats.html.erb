@@ -1,9 +1,18 @@
 <% title "Curio Card Stats" %>
 
-Display last time update curl was triggered
 <br>
-<%# @cardArray.each do |card| %>
-  <br>
-  <%#= card.to_s %>
+<table id="stats_tb" class="center">
+  <tr>
+    <th>Timestamp</th>
+    <th>Action</th>
+    <th>Notes</th>
+  </tr>
+  <% @stats.each do |stat| %>
+  <tr>
+    <td><%= stat.created_at.to_s %></td>
+    <td><%= stat.action.to_s %></td>
+    <td><%= stat.notes.to_s %></td>
+  </tr>
   <%#= image_tag(cardImage(card.id), class: "card-image", style: 'width: 100px;', alt: "Curio Card #{card.id.to_s}") %>
-<%# end %>
+  <% end %>
+</table> 
