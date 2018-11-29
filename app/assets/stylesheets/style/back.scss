@@ -1,0 +1,39 @@
+// CSS for the backend controller views
+body {
+  //box-sizing: border-box;
+  color:#373737;
+  background: #f2f2f2;
+  //font-size: 16px;
+  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+//Table css
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+table#stats_tb {
+  width:60%; 
+  max-width: 900px;
+  min-width: 650px;
+  border-spacing: 5px;
+}
+table#stats_tb th {
+  color: white;
+  background-color: black;
+  text-align: left;
+  padding: 15px;
+}
+table#stats_tb, table#stats_tb td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+table#stats_tb tr:nth-child(even) {
+  background-color: #eee;
+}
+table#stats_tb tr:nth-child(odd) {
+  background-color: #fff;
+}
