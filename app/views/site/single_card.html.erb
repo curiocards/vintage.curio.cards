@@ -1,0 +1,5 @@
+<% title "Curio: " + @card.card_name.to_s %>
+
+<div id="cards-section"></div> <!-- ref for navbar cards button -->
+
+<%= render partial: "title-line", locals: { title: "Card ##{@card.id.to_s} - #{@card.card_name.to_s}" } %>

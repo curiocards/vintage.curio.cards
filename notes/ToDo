@@ -8,8 +8,6 @@ Current - eth update in db
 Primary Tasks:
 - add https://visualping.io/ update trigger
 - Update how card info is shown
-    - remove vending machine info
-    - slide back info under card
     - more info: individual card page on click
 
 ToDo:
