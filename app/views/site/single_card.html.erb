@@ -3,3 +3,41 @@
 <div id="cards-section"></div> <!-- ref for navbar cards button -->
 
 <%= render partial: "title-line", locals: { title: "Card ##{@card.id.to_s} - #{@card.card_name.to_s}" } %>
+
+<div class="page-container">
+  <div class="flex-card_details">
+    <div class="flex-card_holder">
+        <div>
+          <%#= image_tag(cardImage(@card.id), class: "card-image", alt: "Curio Card #{@card.id.to_s}") %>
+
+          <div class="cards-wrapper">
+            <div class="row cards-container">  
+                <div class="card-image-holder">
+                  <%=link_to(image_tag(cardImage(@card.id), class: "card-image", alt: "Curio Card #{@card.id.to_s}"), card_path(id: @card.id)) %>
+                </div>
+            </div>
+          </div>
+       
+        </div>
+        <br><center><b><%= link_to 'Back to Index', index_path %></b></center><br>
+    </div>
+    <div class="flex-details_holder">
+      <h3>Card Info</h3>
+      <b>Card Name: </b><%= @card.card_name.to_s %> <br>
+      <b>Card Description: </b> <%= @card.description.to_s %> <br>
+      <b>Availability: </b> <%= "#{@card.remaining_supply.to_s} / #{@card.max_supply.to_s}" %> <br>
+      <b>Inital Vend Price: </b><%= "#{@card.vend_price.to_s} ETH/card" %> <br>
+      <b>Contract Address: </b><%= @card.card_addr.to_s %> <br>
+      <b><%= link_to 'Card Info Page', card_path(id: @card.id) %></b> <br>
+
+      <br>
+      <h3>Artist Info</h3>
+      <%#binding.pry%>
+      <b>Name:</b> <%= @artist.name.to_s %> <br>
+      <!-- <b>Name:</b> <%#= artist_name %> <br> -->
+      <b><%= link_to 'Artist Info Page', artist_path(username: @artist.username.to_s) %></b> <br>
+      <br>
+    </div>
+  </div>
+</div>
+<br>

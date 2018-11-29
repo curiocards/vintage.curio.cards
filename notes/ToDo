@@ -7,8 +7,6 @@ Current - eth update in db
 
 Primary Tasks:
 - add https://visualping.io/ update trigger
-- Update how card info is shown
-    - more info: individual card page on click
 
 ToDo:
 - switch to 'sold out' if 0 vend supply
@@ -38,6 +36,9 @@ ToDo:
 - general security review: check out rails security best practices, search all app for issues
     https://guides.rubyonrails.org/security.html
     https://blog.sqreen.io/preventing-sql-injections-in-ruby/
+- convert cardwrapper to flxbox
+    - translate css changes to single view's image div madness, which currently is copied from cardwrapper
+- give vend price to cards 1-10, so the single card views 'inital vend price' makes sense
 
 Wishlist:
 - Add 'all cards' page

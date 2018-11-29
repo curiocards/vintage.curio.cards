@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/lookup', to: 'backend#lookup'
   get '/stats', to: 'backend#stats'
   
-  root 'site#index'
+  root 'site#index', as: 'index'
 
   get '/index.html', to: 'site#index'
 

@@ -40,6 +40,9 @@ class SiteController < ApplicationController
     def set_card
       # Returns the card model object by the id
       @card = Card.by_card_id(params[:id])[0]
+
+      @artist = Artist.by_artist_id(@card.artist_id)[0] #faster? custom scope in artist.rb
+      #@artist = Artist.find_by_id(@card.artist_id)
     end
 
 end
