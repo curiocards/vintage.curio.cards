@@ -99,11 +99,11 @@ $('document').ready(function() { // Start the detect lookup page code
   // Create card html and fill it with images and data 
   function populateCardHtml() {
     function cardTpl(id) {
-      let cardHtml = '<div class="flex-card_holder">' +
+      let cardHtml = '<div class="flex-look_card">' +
                         '<div class="flex-img_holder">' +
                           '<img id="cardImage'+id+'">' + //width="100"
                         '</div>' +
-                        '<div class="flex-details_holder">' +
+                        '<div class="flex-look_details">' +
                           '<h3>Card Info</h3>' +
                           '<div id="cardAddr'+id+'"></div>' +
                           '<div id="cardSupply'+id+'"></div>' +
