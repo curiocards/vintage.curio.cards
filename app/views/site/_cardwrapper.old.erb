@@ -1,0 +1,51 @@
+<div class="cards-wrapper">
+    <div class="row cards-container">
+    <%# binding.pry %>
+    <%# cards[0].id,cards[0].max_supply %> 
+        <% cards.each do |card| %>
+            <%# card.id, card.max_supply%>
+            <%# binding.pry %>
+            <div class="col-12 col-lg-6 card-item mx-auto">
+                <div class="card-image-holder">
+                    <a href="#">
+                        <%= image_tag(cardImage(card.id), class: "card-image", alt: "Curio Card #{card.id.to_s}") %>
+                    </a>
+                </div>
+                <div class="text-center down-arrow-grey">
+                    <!-- click this link will scroll to div#card-1 -->
+                    <a href="#card-<%= card.id.to_s %>">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="card-<%= card.id.to_s %>" class="card-details">
+                    <div class="item-label card-address-item">
+                        <img class="bigger-icon" src="/img/ethereum-logo.svg" alt="address">
+                        <span>Card Address:</span>
+                    </div>
+                    <!--
+                        <div class="card-address clipboard-container">
+                        <span class="clipboard-text"></span>
+                        </div>
+                        -->
+                    <div class="card-address">
+                        <span id="outputcard<%= card.id.to_s %>addr">loading...</span>
+                    </div>
+                    <div class="item-label amount-item mb-3">
+                        <img src="/img/price-tag.svg" alt="price">
+                        <span>Amount Available:</span>
+                        <p>
+                            <em id="output<%= card.id.to_s %>vend1supply">loading...</em> / <%= card.max_supply.to_s %></p>
+                        <p><%= card.vend_price.to_s %> | 0.0025 ETH/card</p>
+                    </div>
+                    <div class="item-label vm-address-item">
+                        <img src="/img/shopping-cart.svg" alt="shopping-cart">
+                        <span>VM Address:</span>
+                    </div>
+                    <div class="vm-address">
+                        <span id="outputcard<%= card.id.to_s %>vend1addr">loading...</span>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+  </div>

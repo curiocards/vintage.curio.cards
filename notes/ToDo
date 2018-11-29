@@ -5,11 +5,12 @@ Current - eth update in db
 
 4) devise system to trigger fetch when its been to long. See update notes in top ToDo.
 
-Stats update page trigger:
-- controller loads web3 and active data update
-Two options: external server curls data -or- user triggers
-- going with https://visualping.io/
-- update is recorded in stats db, displayed in stats view
+Primary Tasks:
+- add https://visualping.io/ update trigger
+- Update how card info is shown
+    - remove vending machine info
+    - slide back info under card
+    - more info: individual card page on click
 
 ToDo:
 - switch to 'sold out' if 0 vend supply
