@@ -8,6 +8,7 @@ Primary Tasks:
         - Switch card wrapper to flexbox (currently managed in unsorted)
         - delete all the old 'media type' css styles for the cards
         - delete card-container stuff from the unsorted css
+        - check effects.scss for the ease in thing
 
 ToDo:
 - make these changes: https://www.viget.com/articles/heroku-cloudflare-the-right-way/

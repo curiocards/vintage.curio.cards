@@ -1,4 +1,4 @@
-// Flex Container CSS - Start
+/* Flex Container CSS - Start */
 .page-container {
   //background-color: Silver;
   display: flex;
@@ -6,7 +6,230 @@
   justify-content: center;
 }
 
-// Artist Details
+/* Card wrapper */
+// old, moved here for referance
+.cards-wrapper {
+  max-width: 950px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.card-item {
+  margin-bottom: 90px;
+}
+@media screen and (min-width: 1320px) {
+  .card-item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.333333%;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card-item {
+    margin-bottom: 70px;
+  }
+}
+.card-image-holder {
+  width: 288px;
+  height: 384px;
+  position: relative;
+}
+.card-image-holder:after {
+  content:"";
+  -webkit-transition: box-shadow .3s ease-in-out;
+  -o-transition: box-shadow .3s ease-in-out;
+  transition: box-shadow .3s ease-in-out;
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+.card-image-holder:hover::after {
+  -webkit-box-shadow: 0 7px 20px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0 7px 20px rgba(0,0,0,0.8);
+  box-shadow: 0 7px 20px rgba(0,0,0,0.8);
+}
+.cards-container .card-image {
+  width: 288px;
+  height: 384px;
+  display: block;
+}
+@media screen and (max-width: 1320px) {
+  .cards-container .card-image,
+  .card-image-holder {
+    margin: 0 auto;
+  }
+}
+
+.cards-container .card-details {
+  color: #f0f0f0;
+  padding: 30px 22px 0px 22px; //Top Right Bottom Left
+  position: relative;
+  top: -20px;
+  z-index: -2;
+  width: 288px;
+  height: 170px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+.cards-container .card-details:not(.sold-out) {
+  background: #f24645; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, #f24e49 , #ef7a64); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #f24e49, #ef7a64); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #f24e49, #ef7a64); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #f24e49 , #ef7a64); /* Standard syntax */
+}
+
+.cards-container .card-details.sold-out {
+  background: #f44c4b; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top, #f44c4b , #fd6d6c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #f44c4b, #fd6d6c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #f44c4b, #fd6d6c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #f44c4b , #fd6d6c); /* Standard syntax */
+}
+
+.cards-container .card-details .item-label {
+  margin: 5px 0;
+}
+
+.cards-container .card-details .item-label span {
+  font-size: 16px;
+}
+
+.cards-container .card-details .item-label img {
+  display: inline-block;
+}
+
+.cards-container .card-details .item-label img:not(.bigger-icon) {
+  width: 30px;
+  margin: 0 15px 0 10px;
+}
+
+.cards-container .card-details .item-label.amount-item img {
+  margin: 4px 7px 0 8px;
+}
+
+.cards-container .item-label.vm-address-item {
+  margin-top: -12px !important;
+}
+
+.cards-container .card-details .item-label.vm-address-item img {
+  margin: -2px 8px 5px 8px;
+}
+
+.cards-container .card-details .item-label.amount-item span {
+  position: relative;
+  top: -7px;
+}
+
+.cards-container .card-details .item-label img.bigger-icon {
+  width: 42px;
+  margin: 2px 0 0 4px;
+}
+
+.cards-container .card-details .card-address, .cards-container .card-details .vm-address {
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  height: auto;
+  word-break: break-all;
+  padding: 10px;
+  font-family: "Lucida Console", "Courier New", Monaco, monospace;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 17px;
+  line-height: 1em;
+  text-align: center;
+}
+
+.cards-container .card-details .clipboard-text.hidden {
+  visibility: hidden;
+}
+
+.cards-container .card-details .clipboard-text:hover {
+  opacity: .8;
+}
+
+.cards-container .card-details .copied-info {
+  color: #f24645;
+  font-family: 'Rubik', sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.cards-container .card-details .card-address:not(.copied),
+.cards-container .card-details .vm-address:not(.copied) {
+  background-color: transparent;
+}
+
+.cards-container .card-details .card-address.copied,
+.cards-container .card-details .vm-address.copied {
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.cards-container .card-details .card-address,
+.cards-container .card-details .vm-address {
+  -webkit-transition: background-color .7s ease-in-out;
+  -o-transition: background-color .7s ease-in-out;
+  transition: background-color .7s ease-in-out;
+}
+
+.cards-container .card-details .card-address {
+  margin-bottom: 20px;
+}
+
+.cards-container .card-details .vm-address {
+  margin-bottom: 44px;
+  margin-top: -4px !important;
+}
+
+.cards-container .card-details .item-label p {
+  margin: 0;
+  margin-left: 49px;
+  line-height: 1.4em;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: .9px;
+  margin-top: -12px;
+  padding-bottom: 12px;
+}
+
+.cards-container .card-details .item-label.card-address-item span,
+.cards-container .card-details .item-label.amount-item span,
+.cards-container .card-details .item-label.vm-address-item span {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+
+.cards-container .card-details .item-label.card-address-item span {
+  position: relative;
+  top: 6px;
+}
+
+.cards-container .card-details .sold-out-label {
+  margin-top: 78px;
+}
+
+.cards-container .card-details .sold-out-label span {
+  border: 5px solid #f0f0f0;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Artist Details */
 .flex-artist {
   background-color: white;
   box-shadow: 0 0 25px rgba(0,0,0,.1);
@@ -24,7 +247,7 @@
   display: block;
 }
 
-// Card Page
+/* Single Card Page */
 .flex-card_details {
   //background-color: Silver;
   display: flex;
@@ -45,7 +268,7 @@
   padding: 10px;
 }
 
-// Lookup Page
+/* Lookup Page */
 .flex-look_card {
   display: flex;
   flex-flow: row wrap;
@@ -78,52 +301,5 @@
   height: 0px;
   //background-color: red;
 }
-// Flex Container CSS - End
 
-// // Flex Container CSS - Start
-// .flex-container {
-//   //background-color: Silver;
-//   display: flex;
-//   flex-flow: row wrap;
-//   justify-content: center;
-// }
-// .flex-img img {
-//   height: 100%;
-//   width: 100%;
-//   object-fit: contain;
-// }
-// .flex-card {
-//   background-color: white;
-//   box-shadow: 0 0 25px rgba(0,0,0,.1);
-//   padding-top: 10px;
-//   margin: 10px;
-//   width: 320px;
-//   height: 575px;
-//   //min-width: 300px;
-// }
-// .flex-card-gold {
-//   background-color: khaki !important;
-// }
-// .flex-card p {
-//   word-wrap: break-word;
-//   padding-left: 25px;
-//   padding-right: 25px;
-// }
-// .flex-artist_details {
-//   background-color: white;
-//   box-shadow: 0 0 25px rgba(0,0,0,.1);
-//   margin: 10px;
-//   width: 840px;
-//   padding: 25px;
-// }
-// .flex-dummy {
-//   margin: 10px;
-//   width: 320px;
-//   height: 0px;
-// }
-// .flex-container th, td {
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   text-align: center;
-// }
-// // Flex Container CSS - End
+/* Flex Container CSS - End */
