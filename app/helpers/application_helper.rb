@@ -4,6 +4,18 @@ module ApplicationHelper
     # image_tag("/img/cards/#{id.to_s}.jpg")
     img_path = Rails.root.join("public/img/cards/").to_s
     
+    # Check if it's a valid id in the db (there is no card 0, or card 100+, or card "l")
+    if card_id.class != Integer
+      # Anything other than an interger? kick it out
+      return ""
+    elsif card_id <= 0
+      # id can't be 0 or less
+      return ""
+    elsif card_id > 100
+      # Currently no where near that many cards
+      return ""
+    end
+
     # cards under 10 are named with a leading 0. Add the leading zero.
     if card_id < 10
       card_id = "0" + card_id.to_s
@@ -19,9 +31,8 @@ module ApplicationHelper
       return "/img/cards/#{card_id}.gif"
     else
       return "" # returning nil errors out the page, link_to cant handle it
-      # ToDo: check if it's a valid id in the db (there is no card 0, or card 1000, etc)
-      # ToDo: try to return the cards https://ipfs location before doing ""
     end
+    
   end
 
   def title(page_title)
