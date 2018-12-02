@@ -1,6 +1,5 @@
 Bugs:
 - (bug) fix the weird half second lockup delay on index page load. only in ffox?
-- Cards are not in order under there date grouping (look at phneep)
 
 Current - eth update in db
 

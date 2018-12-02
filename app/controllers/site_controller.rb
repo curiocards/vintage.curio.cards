@@ -33,7 +33,7 @@ class SiteController < ApplicationController
 
       # Custom scope from card.rb takes the artist username, finds artist id, finds all cards associated with it
       # List of cards is then grouped by publish_date, and sorted
-      @grouped_cards = Card.by_artist_username(params[:username]).group_by{|card| card.publish_date}.sort 
+      @grouped_cards = Card.by_artist_username(params[:username]).order(id: :asc).group_by{|card| card.publish_date}.sort 
       # binding.pry
     end
 
