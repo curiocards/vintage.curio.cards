@@ -1,7 +1,6 @@
 /* Effects */
 
-/* ease in */
-
+/* ease in? */
 .ease-in,
 .page-navbar.navbar-inverse .navbar-nav .nav-link,
 .down-arrow-circle,
@@ -19,3 +18,27 @@
     -o-transition: opacity .1s ease-in;
     transition: opacity .1s ease-in;
 }
+
+/* Card wrapper shadows + hover popup */
+.flex-card_img:after {
+    content:"";
+   -webkit-transition: box-shadow .3s ease-in-out;
+   -o-transition: box-shadow .3s ease-in-out;
+   transition: box-shadow .3s ease-in-out;
+   position: absolute;
+   z-index: -1;
+   -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+   -moz-box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+   box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   -moz-border-radius: 100px / 10px;
+   border-radius: 100px / 10px;
+ }
+ .flex-card_img:hover::after {
+   -webkit-box-shadow: 0 7px 20px rgba(0,0,0,0.8);
+   -moz-box-shadow: 0 7px 20px rgba(0,0,0,0.8);
+   box-shadow: 0 7px 20px rgba(0,0,0,0.8);
+ }

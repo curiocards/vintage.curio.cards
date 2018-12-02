@@ -1,26 +1,20 @@
-<div class="cards-wrapper">
-    <div class="row cards-container">
-    <%# binding.pry %>
-    <%# cards[0].id,cards[0].max_supply %> 
-        <% cards.each do |card| %>
-            <%# card.id, card.max_supply%>
-            <%# binding.pry %>
-            <div class="col-12 col-lg-6 card-item mx-auto">
-                <div class="card-image-holder">
-                    <%=link_to(image_tag(cardImage(card.id), class: "card-image", alt: "Curio Card #{card.id.to_s}"), card_path(id: card.id)) %>
-                </div>
-                <div class="card-details">
-                    <div class="card-address">
-                        <%= card.card_name.to_s %>
-                    </div>
-                    <div class="item-label amount-item mb-3">
-                        <img src="/img/price-tag.svg" alt="price">
-                        <span>Availability Info:</span>
-                        <p><%= "#{card.remaining_supply.to_s} / #{card.max_supply.to_s}" %></p>
-                        <p><%= "#{card.vend_price.to_s} ETH/card" %></p>
-                    </div>
-                </div>
+<div class="page-container">
+    <% cards.each do |card| %>
+    <div class="flex-cardbox">
+        <div class="flex-card_img">
+            <%=link_to(image_tag(cardImage(card.id), class: "card-image", alt: "Curio Card #{card.id.to_s}"), card_path(id: card.id)) %>
+        </div>
+        <div class="flex-card_info">
+            <div class="box">
+                <%= card.card_name.to_s %>
             </div>
-        <% end %>
+            <div class="amount-item">
+                <img src="/img/price-tag.svg" alt="price">
+                <span>Availability Info:</span>
+                <p><%= "#{card.remaining_supply.to_s} / #{card.max_supply.to_s}" %></p>
+                <p><%= "#{card.vend_price.to_s} ETH/card" %></p>
+            </div>
+        </div>
     </div>
-  </div>
+    <% end %>
+</div>
