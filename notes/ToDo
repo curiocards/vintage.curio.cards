@@ -1,5 +1,6 @@
 Bugs:
 - (bug) fix the weird half second lockup delay on index page load. only in ffox?
+- Cards are not in order under there date grouping (look at phneep)
 
 Current - eth update in db
 
@@ -9,6 +10,10 @@ Primary Tasks:
 - add https://visualping.io/ update trigger
 
 ToDo:
+- make these changes: https://www.viget.com/articles/heroku-cloudflare-the-right-way/
+- custom 404 pages 
+    - https://devcenter.heroku.com/articles/error-pages
+    - https://medium.com/@tair/custom-error-pages-in-rails-you-re-doing-it-wrong-ba1d20ec31c0
 - switch to 'sold out' if 0 vend supply
 - db data accurate? some of the update data might be wrong, like supply on 1-14
 - put in "@var ||= thing" where ever can cache assignments, like in the web3 code. If done before, don't do again just use previous
