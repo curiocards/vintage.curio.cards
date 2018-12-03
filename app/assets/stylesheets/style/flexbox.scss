@@ -7,6 +7,10 @@
 }
 
 /* Card wrapper */
+img.card_img {
+  width: 288px;
+  height: 384px;
+}
 .flex-cardbox {
   padding: 0px 15px;
 }
@@ -14,10 +18,6 @@
   width: 288px;
   height: 384px;
   position: relative;
-}
-.flex-cardbox .flex-card_img img {
-  width: 288px;
-  height: 384px;
 }
 .flex-cardbox .flex-card_info {
   background: #f24645; /* For browsers that do not support gradients */
@@ -100,7 +100,7 @@
   margin: 10px;
   width: 840px;
   padding-top: 10px;
-  z-index: -2; // Lowers white box so that cards shadow (set at -1) can be ontop
+  z-index: 0; // sets white box's z so that card shadow in effects shows up
 }
 .flex-card_holder {
   width: 320px;

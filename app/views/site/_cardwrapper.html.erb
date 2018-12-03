@@ -2,7 +2,7 @@
     <% cards.each do |card| %>
     <div class="flex-cardbox">
         <div class="flex-card_img">
-            <%=link_to(image_tag(cardImage(card.id), class: "card-image", alt: "Curio Card #{card.id.to_s}"), card_path(id: card.id)) %>
+            <%=link_to(image_tag(cardImage(card.id), class: "card_img", alt: "Curio Card #{card.id.to_s}"), card_path(id: card.id)) %>
         </div>
         <div class="flex-card_info">
             <div class="box">
