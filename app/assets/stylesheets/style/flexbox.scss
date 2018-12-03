@@ -22,7 +22,7 @@ img.card_img {
 .flex-cardbox {
   padding: 0px 15px;
 }
-.flex-cardbox .flex-card_img {
+.flex-card_img {
   width: 288px;
   height: 384px;
   position: relative;
@@ -97,7 +97,7 @@ img.card_img {
 }
 
 /* Single Card Page */
-.flex-card_details {
+.flex-singlebox {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -108,11 +108,12 @@ img.card_img {
   padding-top: 10px;
   z-index: 0; // sets white box's z so that card shadow in effects shows up
 }
-.flex-card_holder {
+.flex-singlebox .flex-single_img {
   width: 320px;
   padding: 10px;
+  position: relative;
 }
-.flex-details_holder {
+.flex-singlebox .flex-single_info {
   max-width: 500px;
   padding: 10px;
 }
