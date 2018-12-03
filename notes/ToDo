@@ -3,10 +3,6 @@ Bugs:
 
 Primary Tasks:
     - add https://visualping.io/ update trigger
-    - Rename flex box items for single card, lookup, and artists to match simpler cardwrapper model
-        - thingbox
-            - 
-
 
 ToDo:
 - make these changes: https://www.viget.com/articles/heroku-cloudflare-the-right-way/
@@ -35,12 +31,10 @@ ToDo:
 
 Wishlist:
 - Add 'all cards' page
-- Add 'single card' page
 - Check if valid username or card id before loading user or card page
     - # Card.by_artist("robekworld").exists checks if valid username faster than .present?
     - Card.first, Card.last, check id, defined as range.
 - If no jpg or png or gif avalible, pull from ipfs. check localforge cache before fetching.
-
 - Sort and delete the unsorted css file
 - Switch gallery over to local images, not ipfs
     - Have ipfs links
@@ -59,4 +53,3 @@ Wishlist:
 - fix the card id upper limit in cardImage helper - currently maxes out at 100, but what about when we have more cards?
 - Try to return the cards https://ipfs location before doing "" in cardImage helper
 - devise system to trigger fetch when its been to long. See update notes in top ToDo.
-
