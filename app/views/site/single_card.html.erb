@@ -7,17 +7,11 @@
 <div class="page-container">
   <div class="flex-card_details">
     <div class="flex-card_holder">
-        <div>
-          <%#= image_tag(cardImage(@card.id), class: "card-image", alt: "Curio Card #{@card.id.to_s}") %>
-
-          <div class="cards-wrapper">
-            <div class="row cards-container">  
-                <div class="card-image-holder">
-                  <%=link_to(image_tag(cardImage(@card.id), class: "card-image", alt: "Curio Card #{@card.id.to_s}"), card_path(id: @card.id)) %>
-                </div>
-            </div>
+        <%#= image_tag(cardImage(@card.id), class: "card-image", alt: "Curio Card #{@card.id.to_s}") %>
+        <div class="flex-cardbox">
+          <div class="flex-card_img">
+            <%=link_to(image_tag(cardImage(@card.id), class: "card-image", alt: "Curio Card #{@card.id.to_s}"), card_path(id: @card.id)) %>
           </div>
-       
         </div>
         <br><center><b><%= link_to 'Back to Index', index_path %></b></center><br>
     </div>

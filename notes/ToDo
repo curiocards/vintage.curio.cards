@@ -4,11 +4,9 @@ Bugs:
 Primary Tasks:
     - add https://visualping.io/ update trigger
     - convert cardwrapper to flxbox
-        - translate css changes to single view's image div madness, which currently is copied from cardwrapper
-        - Switch card wrapper to flexbox (currently managed in unsorted)
-        - delete all the old 'media type' css styles for the cards
-        - delete card-container stuff from the unsorted css
-        - check effects.scss for the ease in thing
+
+- Rename flex box items for single card, lookup, and artists to match simpler cardwrapper model
+
 
 ToDo:
 - make these changes: https://www.viget.com/articles/heroku-cloudflare-the-right-way/

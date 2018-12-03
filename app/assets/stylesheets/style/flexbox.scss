@@ -10,17 +10,16 @@
 .flex-cardbox {
   padding: 0px 15px;
 }
-.flex-card_img {
-  background-color: blue;
+.flex-cardbox .flex-card_img {
   width: 288px;
   height: 384px;
   position: relative;
 }
-.flex-card_img img {
+.flex-cardbox .flex-card_img img {
   width: 288px;
   height: 384px;
 }
-.flex-card_info {
+.flex-cardbox .flex-card_info {
   background: #f24645; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(top, #f24e49 , #ef7a64); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom, #f24e49, #ef7a64); /* For Opera 11.1 to 12.0 */
@@ -36,7 +35,7 @@
   border-radius: 25px;
   margin: 0 auto;
 }
-.flex-card_info .box {
+.flex-cardbox .flex-card_info .box {
   border: 2px solid #f0f0f0;
   border-radius: 12px;
   height: auto;
@@ -50,14 +49,14 @@
   text-align: center;
   margin-bottom: 20px;
 }
-.flex-card_info .amount-item span {
+.flex-cardbox .flex-card_info .amount-item span {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 1.2px;
   position: relative;
   top: -7px;
 }
-.flex-card_info .amount-item p {
+.flex-cardbox .flex-card_info .amount-item p {
   margin: 0;
   margin-left: 49px;
   line-height: 1.4em;
@@ -67,7 +66,7 @@
   margin-top: -12px;
   padding-bottom: 12px;
 }
-.flex-card_info .amount-item img {
+.flex-cardbox .flex-card_info .amount-item img {
   margin: 4px 7px 0 8px;
   display: inline-block;
   width: 30px;
@@ -93,7 +92,6 @@
 
 /* Single Card Page */
 .flex-card_details {
-  //background-color: Silver;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -102,6 +100,7 @@
   margin: 10px;
   width: 840px;
   padding-top: 10px;
+  z-index: -2; // Lowers white box so that cards shadow (set at -1) can be ontop
 }
 .flex-card_holder {
   width: 320px;
