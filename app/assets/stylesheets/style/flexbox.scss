@@ -118,8 +118,16 @@ img.card_img {
   padding: 10px;
 }
 
+/* 
+Model for flexboxs: 
+page-container
+  flex-thingbox
+    flex-thingbox .flex-thing_img
+    flex-thingbox .flex-thing_info
+*/
+
 /* Lookup Page */
-.flex-look_card {
+.flex-lookbox {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -128,7 +136,7 @@ img.card_img {
   margin: 10px;
   width: 650px;
 }
-.flex-img_holder {
+.flex-lookbox .flex-look_img {
   width: 150px;
   height: 200px;
   margin-top: 20px;
@@ -136,16 +144,16 @@ img.card_img {
   position: relative;
   box-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
-.flex-img_holder img {
+.flex-lookbox .flex-look_img img {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
-.flex-look_details {
+.flex-lookbox .flex-look_info {
   width: 460px;
   margin-left: 20px;
 }
-.flex-card-dummy {
+.flex-look_dummy {
   margin: 10px;
   width: 650px;
   height: 0px;

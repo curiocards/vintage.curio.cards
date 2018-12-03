@@ -56,7 +56,7 @@ $('document').ready(function() { // Start the detect lookup page code
   ];
 
   let numloops = cardInfoArray.length;
-  //let numloops = 3;
+  //let numloops = 7;
   
   // Get card contract 
   let cardContract = null;
@@ -99,11 +99,11 @@ $('document').ready(function() { // Start the detect lookup page code
   // Create card html and fill it with images and data 
   function populateCardHtml() {
     function cardTpl(id) {
-      let cardHtml = '<div class="flex-look_card">' +
-                        '<div class="flex-img_holder">' +
+      let cardHtml = '<div class="flex-lookbox">' +
+                        '<div class="flex-look_img">' +
                           '<img id="cardImage'+id+'">' + //width="100"
                         '</div>' +
-                        '<div class="flex-look_details">' +
+                        '<div class="flex-look_info">' +
                           '<h3>Card Info</h3>' +
                           '<div id="cardAddr'+id+'"></div>' +
                           '<div id="cardSupply'+id+'"></div>' +
@@ -118,11 +118,11 @@ $('document').ready(function() { // Start the detect lookup page code
                       '</div>';
       return cardHtml;
     }
-    let cardHtmlBuffer =  '<div class="flex-card-dummy"></div>' +
-                          '<div class="flex-card-dummy"></div>' +
-                          '<div class="flex-card-dummy"></div>' +
-                          '<div class="flex-card-dummy"></div>' +
-                          '<div class="flex-card-dummy"></div>';
+    let cardHtmlBuffer =  '<div class="flex-look_dummy"></div>' +
+                          '<div class="flex-look_dummy"></div>' +
+                          '<div class="flex-look_dummy"></div>' +
+                          '<div class="flex-look_dummy"></div>' +
+                          '<div class="flex-look_dummy"></div>';
     let cardContainer = $("#info-container");
     for (let i=0; i<numloops;++i) {
       cardContainer.append( cardTpl(i) );
