@@ -3,6 +3,8 @@ Bugs:
 
 Primary Tasks:
     - add https://visualping.io/ update trigger
+    - Add 'all cards' page
+    - change front page - all cards link, see next cards for vote
 
 ToDo:
 - make these changes: https://www.viget.com/articles/heroku-cloudflare-the-right-way/
@@ -30,7 +32,6 @@ ToDo:
 - give vend price to cards 1-10, so the single card views 'inital vend price' makes sense
 
 Wishlist:
-- Add 'all cards' page
 - Check if valid username or card id before loading user or card page
     - # Card.by_artist("robekworld").exists checks if valid username faster than .present?
     - Card.first, Card.last, check id, defined as range.
