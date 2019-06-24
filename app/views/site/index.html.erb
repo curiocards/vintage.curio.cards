@@ -2,20 +2,19 @@
 
 <div id="cards-section"></div> <!-- ref for navbar cards button -->
 
-<%= render partial: "title-line", locals: { title: "New Card Voting" } %>
-<div class="text-center body-content">
-  <h3>
-    <b>New Cards being voted on Now</b>
-    <br>Throw your support behind the card and artist you want to see next
-    <br>
-  </h3>
-  <div class="body-button text-center">
-    <%= link_to "Vote Now", "https://vote.curio.cards", class: "text-uppercase", target: :_blank %>
-  </div>
-</div>
-
 <%= render partial: "title-line", locals: { title: "Featured Cards" } %>
 
 <%= render partial: "cardwrapper", locals: { cards: @last } %>
+
+<%= render partial: "title-line", locals: { title: "Voting" } %>
+<div class="text-center body-content">
+  <h3>
+    <b>Check the results of the last vote</b>
+    <br>
+  </h3>
+  <div class="body-button text-center">
+    <%= link_to "Vote Results", "https://vote.curio.cards", class: "text-uppercase", target: :_blank %>
+  </div>
+</div>
 
 <%= render partial: "artist-list" %>
