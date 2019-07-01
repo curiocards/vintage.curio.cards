@@ -1,24 +1,3 @@
-# README
+# Curio Card Directory
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Curio Cards is an Ethereum art project created by Travis Uhrig, Thomas Hunt, and Rhett Creighton with the goal of building on the San Francisco Bitcoin Meetup's Annual Art Show by taking it online. Released May 09th of 2017, Curio appears to be the first non-fungible art token sold on mainnet Ethereum (please drop us a line if you know of an earlier project). Curio Cards is referenced in the ERC-721 EIP, which is standardized non-fungible-tokens contract that was developed later on. As such Curio contains many features that have since become standard for NFTs, such as automatic vending machine style purchasing, non-divisible tokens, and using IPFS hashes to embed the artwork into the smart contract. Curio's token smart contract is a modified ERC-20 contract created by Rhett Creighton and Michael C. Over the span of 4 months Curio Cards deployed 30 card contracts representing 30 rare digital print series' made by 7 artists. This repo is for the Ruby on Rails card directory and project information site created by Travis Uhrig, visible at <https://Curio.Cards>
