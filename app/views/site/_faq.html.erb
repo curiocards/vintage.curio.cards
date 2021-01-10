@@ -5,66 +5,31 @@
     <div id="accordion">
         <%= render layout: 'accordion-panel', locals: {
             q_id: "1",
-            q_title: "Q: What are Curio Cards?"
+            q_title: "Q: What is Curio Cards?"
             } do %>
-            Curio Card's mission is to create a platform for artists and collectors that finally benefits artists. 
-            Until now it's not been possible to sell digital artwork without massive fees, theft, or restrictive DRM.
+            Curio Card's was an online art show started with the mission to create a platform for artists and collectors that benefited the artists. Previously it had not been possible to sell digital artwork without massive fees, theft, or restrictive DRM.
             <br>
-            <b>Curio is changing that.</b>
+            <b>Curio was started to change that.</b>
             <br>
-            <br> Now you can own rare and collectible digital artwork, and interact with it in amazing new ways, all built
-            on proven blockchain technology.
+            <br> Curio was the first Non-Fungible Token (NFT) marketplace for artists on mainnet Ethereum. With it you could own a rare and collectible piece of digital artwork.
             <br>
-            <br> We encourage you to join our Discord channel to keep up-to-date, share your ideas, and meet the Curio
-            community.
-            <br>
-            <center>
-            <a href="https://discord.gg/uA6vnD3" target="_blank">
-            <img src="/img/discord.svg" width="100">
-            <br>Click Here to Join!
-            </a>
+            <br> The Curio art show ran in 2017 with 30 different artists. The cards bought then still work and are still transferable, however Curio pre-dates and is not compatible with the new wallet standards that have come out since. This new ecosystem of amazing NFT projects and standards is still a dynamic and changing field, which makes it hard to link to any particular project, but we encourage you to lookup the Crypto NFT community on twitter as a starting point for learning more.
         <% end %>
 
         <%= render layout: 'accordion-panel', locals: {
             q_id: "2",
-            q_title: "Q: I'm an artist, how can I make my own cards?"
+            q_title: "Q: How can I get cards?"
             } do %>
-            Welcome to Curio Cards, we are thrilled you found this project. We are featuring select artists currently, with plans to
-            massively open up the platform to everyone as we scale up.
-            <br>
-            <br> Please let us know about your work and your interest by submitting it on the
-            <a href="https://community.curio.cards" target="_blank">
-            <b>Community Site</b>
-            </a>, and joining our
-            <a href="https://discord.gg/uA6vnD3" target="_blank">
-            <b>Discord</b>
-            </a> channel to let us know about yourself.
+            We no longer support new card sales on this site following the closing of the Curio art show. With the creation of new standards like ERC-721, maintaining support for the modified ERC-20 Curio contract was not possible. For cards that have already been sold, that supply is now in the hands of individual owners. It will always be possible to trade for those cards with the people who currently own them.
         <% end %>
 
         <%= render layout: 'accordion-panel', locals: {
             q_id: "3",
-            q_title: "Q: How can I get sold out cards? What does it mean to own a sold out card?"
-            } do %>
-            For cards that are sold out, the total supply that will ever exist is now in the hands of individual owners. Those cards
-            are no longer available from the Curio Cards site artists, and the only way to get them is to trade with
-            people who currently own those cards.
-        <% end %>
-
-        <%= render layout: 'accordion-panel', locals: {
-            q_id: "4",
             q_title: "Q: What wallets are supported?"
             } do %>
-            As long as it's a wallet that lets you control the private keys, you will recieve your Curio Cards.
-            <br> But you won't be able to see or manage them unless you use
-            <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a>. Devices like the Trezor and Ledger S nano are also compatable with
-            <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a>, allowing you to easily store your Curio Cards in a secure hardware wallet.
+            As long as it's an Ethereum wallet that lets you control your private keys you can store Curio Cards in it, but you won't be able to see or manage them unless you manually add the token contract address. This process is different for every wallet. The original Curio Wallet has all of these addresses already added, but be advised it is no longer supported or updated. You can find it here: <a href="https://mycuriowallet.com" target="_blank">MyCurioWallet</a>. 
             <br>
-            <br>
-            <a href="https://mycuriowallet.com" target="_blank">CurioWallet</a> is mobile compatable, and we will be adding native iOS and Android apps.
-            <br>
-            <br>
-            <b>Don't</b> use ethereum wallets from exchanges when buying cards. You will not recieve your cards since
-            you do not control the private keys.
+            <b>Don't</b> use ethereum wallets from exchanges for managing cards. Those wallets don't allow you control the private keys and cannot manage unsupported tokens.
         <% end %>
     </div>
 </section>
