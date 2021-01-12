@@ -18,9 +18,9 @@
       <h3>Card Info</h3>
       <b>Card Name: </b><%= @card.card_name.to_s %> <br>
       <b>Card Description: </b> <%= @card.description.to_s %> <br>
-      <b>Availability: </b> <%= "#{@card.remaining_supply.to_s} / #{@card.max_supply.to_s}" %> <br>
+      <b>Amount Sold: </b> <%= "#{(@card.max_supply - @card.remaining_supply).to_s}" %> <br>
       <b>Inital Vend Price: </b><%= "#{@card.vend_price.to_s} ETH/card" %> <br>
-      <b>Contract Address: </b><%= @card.card_addr.to_s %> <br>
+      <b>Contract Address (Warning: Do Not Send Eth to this Address): </b><%= @card.card_addr.to_s %> <br>
       <b><%= link_to 'Card Info Page', card_path(id: @card.id) %></b> <br>
 
       <br>

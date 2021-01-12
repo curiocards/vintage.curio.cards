@@ -10,8 +10,8 @@
             </div>
             <div class="amount-item">
                 <img src="/img/price-tag.svg" alt="price">
-                <span>Availability Info:</span>
-                <p><%= "#{card.remaining_supply.to_s} / #{card.max_supply.to_s}" %></p>
+                <span>Supply Info:</span>
+                <p><%= "#{(card.max_supply - card.remaining_supply).to_s} sold" %></p>
                 <p><%= "#{card.vend_price.to_s} ETH/card" %></p>
             </div>
         </div>
