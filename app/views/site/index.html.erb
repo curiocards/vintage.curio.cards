@@ -6,16 +6,4 @@
 
 <%= render partial: "cardwrapper", locals: { cards: @last } %>
 
-<%= render partial: "title-line", locals: { title: "Voting" } %>
-<div class="text-center body-content">
-  <h3>
-    <b>Check the results of the last vote</b>
-    <br>
-  </h3>
-  <div class="body-button text-center">
-    <%= link_to "Vote Results", "https://vote.curio.cards", class: "text-uppercase", target: :_blank %>
-  </div>
-</div>
-<br>
-
 <%= render partial: "artist-list" %>
