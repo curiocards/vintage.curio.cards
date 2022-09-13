@@ -1,6 +1,8 @@
 # Curio Cards Directory Site
 
-This repo is for the Ruby on Rails card directory and project information site located at <https://Curio.Cards>
+This repo is for the original Ruby on Rails card directory and project information site located at [https://Vintage.Curio.Cards](https://vintage.curio.cards/)
+
+**The new website is available at this repository: https://github.com/fafrd/curio-cards-site-2021**
 
 ## Project Overview
 
